@@ -11,6 +11,8 @@ body{
 
 h1, h2 {
     font-family: Georgia, 'Times New Roman', serif;
+    text-align: center;
+    
 
 }
 a {
@@ -21,14 +23,15 @@ a:hover {
     text-decoration: none;
     color: #333333;
 }
-.validator {
-    display: inline-block;
-    border-radius: 8px;
-    padding: 0.25em 0.5em;
+
+ul {
+    text-align: left;
+    display: inline-flex;
+    margin: 3px;
+    width: 80%;
+
 }
-.validator:hover, .validator:focus {
-    background-color: #737373;
-    color: white;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
-    transform: translateY(-3px);
-}
+
+
+
+
