@@ -26,9 +26,7 @@ a:hover {
 
 ul {
     text-align: left;
-    display: inline-flex;
-    margin: 3px;
-    width: 80%;
+    display: inline-block;
 
 }
 
