@@ -13,23 +13,26 @@ h1, h2 {
     font-family: Georgia, 'Times New Roman', serif;
     text-align: center;
     
-
 }
 a {
-    color: #b08b4f;
+   color: #fff;
+    background: #b08b4f;
+    padding: 0.3em 0.8em;
+    border-radius: 6px;
+    transition:  0.2s, color 0.2s;
     text-decoration: none;
 }
 a:hover {
+    background: #fff;
+    color: #b08b4f;
     text-decoration: none;
-    color: #333333;
+    border: 1px solid #b08b4f;
+    box-shadow: 0 6px 16px rgba(0,0,0,.15); 
 }
 
 ul {
     text-align: left;
     display: inline-block;
-
 }
-
-
 
 
