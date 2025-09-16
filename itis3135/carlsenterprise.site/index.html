@@ -5,12 +5,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!--  "#00296b","#003f88","#00509d","#fdc500","#ffd500"-->
+
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: "Segoe UI", Roboto, sans-serif;
+        background: #f9f9f9;
+        color: #00296b;
+        line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+        background: linear-gradient(135deg, #00296b, #003f88);
+        color: #fff;
+        text-align: center;
+        padding: 2.5rem 1rem;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    /* Main Content */
+    main {
+        max-width: 900px;
+        margin: 3rem auto;
+        padding: 0 1.5rem;
+    }
+
+    main h2 {
+        color: #003f88;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        border-left: 6px solid #fdc500;
+        padding-left: 0.75rem;
+    }
+
+    main p {
+        margin-bottom: 1.2rem;
+        font-size: 1.1rem;
+    }
+
+    /* Services list */
+    ul {
+        list-style: none;
+        margin: 2rem 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+    }
+
+    ul li {
+        background: #00509d;
+        color: #fff;
+        padding: 1rem 1.25rem;
+        border-radius: 10px;
+        font-weight: 500;
+        text-align: center;
+        transition: transform 0.2s;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+
+    ul li:hover {
+        transform: translateY(-4px);
+        background: #003f88;
+    }
+
+    /* Contact Info */
+    a {
+        color: #00509d;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    a:hover {
+        color: #fdc500;
+    }
+
+    /* Footer */
+    footer {
+        text-align: center;
+        background: #00296b;
+        color: #fff;
+        padding: 1.5rem 0;
+        margin-top: 4rem;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+    }
+</style>
 </head>
 <body>
     <header>
         <h1>carlsenterprise</h1>
     </header>
-    <main></main>
+    <main>
+        <h2>CarlsEnterprise Services</h2>
+        <p> CarlsEnterprise specializes in testing the durability and reliability of smartphones 
+            to ensure they meet the highest standards of quality. We conduct comprehensive 
+            evaluations that simulate real-world conditions, including drop tests, water 
+            and dust resistance testing, pressure and bend analysis, and long-term wear assessments. 
+            By combining advanced testing equipment with industry expertise, we provide 
+            manufacturers and consumers with accurate, data-driven insights into device 
+            strength and longevity—helping build trust in the products people use every day.
+        </p>
+        <ul>
+            <li>Certified and Trusted Expertise</li>
+            <li>State of the Art Testing Labs</li>
+            <li>Fast and Transparent Reporting</li>
+            <li>Customer First Support</li>
+            <li>Data Driven Insights</li>
+            <li>We Break It So You Don’t Have To</li>  
+        </ul>
+
+        <p>We’re passionate about helping our clients launch phones that can stand up to anything
+             life throws at them. From initial concept testing to final pre-launch durability certification,
+              our team works closely with you to design a custom testing plan that matches your goals, 
+              timelines, and quality standards. We aim to give you complete confidence in your product 
+              before it reaches the hands of customers—because strong devices build strong reputations.
+        </p>
+
+        <p>
+            <strong>Phone:</strong>
+            <a href="tel:+17046543210">(704)-654-3210</a>
+        </p>
+
+        <p>
+            <strong>Email:</strong>
+            <a href="carlsenterprise@emaple.com">carlsenterprise@email.com</a>
+        </p>
+
+        <p> 
+            <strong>Address:</strong>
+            123 downthestreet charlotte, NC 23145
+        </p>
+
+
+    </main>
     <footer></footer>
     
 </body>
