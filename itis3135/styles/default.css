@@ -8,16 +8,15 @@ body{
     margin: 0 auto;
     text-align: center;
 }
+header {
+    margin: 0;
+}
 
 h1, h2 {
     font-family: Georgia, 'Times New Roman', serif;
     text-align: center;
+   
     
-}
-
-p {
-  margin-top: 0.4em;
-  margin-bottom: 0.4em;
 }
 
 
