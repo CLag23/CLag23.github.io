@@ -9,13 +9,14 @@
 
 
     
-        body {
+        body, html {
             font-family: 'Segoe UI', sans-serif;
             background:#1c1c3a;
             color: #ffffff;
             margin: 0;
             padding: 0 auto;
             box-sizing: border-box;
+            height:100%
         }
 
         a {
@@ -26,10 +27,15 @@
         header {
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content:space-between;
             background: #121225;
             padding: 1rem 2rem;
             border-bottom: 2px solid #1f1f3d;
+        }
+        .img-plus-name {
+            display: flex;
+            align-items: center;
+            gap:1rem;
         }
         nav a {
             margin-left: 1.5rem;
@@ -37,6 +43,7 @@
             font-weight: 600;
             transition: color 0.3s ease;
         }
+
 
         nav a:hover {
             color:  white
@@ -49,10 +56,11 @@
 
         
         main {
-            display: flex;
+             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
             padding: 8rem;
+            gap: 10rem;
             background: linear-gradient(135deg, #1c1c3a);
         }
      
@@ -63,9 +71,15 @@
             -webkit-text-fill-color: transparent;
             margin-bottom: 1rem;
         }
+        h2 {
+            background: linear-gradient(90deg, #a259ff, #00cfff);
+            -webkit-background-clip: text;   
+            -webkit-text-fill-color: transparent;
+
+        }
 
         p {
-            font-size: 1.2rem;
+            font-size: 1rem;
             color: #d3d3e7;
             margin-bottom: 2rem;
             max-width: 500px;
@@ -75,7 +89,7 @@
             display: inline-block;
             background: #a259ff;
             color: #fff;
-            padding: 0.8rem 1.5rem;
+            padding: 1rem 1rem;
             border-radius: 6px;
             font-weight: 600;
             transition: background 0.3s ease;
@@ -120,7 +134,10 @@
 </head>
 <body>
     <header>
-        <img src="/itis3135/images/cosmiclynx.png" alt="Cosmic Lynx Logo">
+        <div class="img-plus-name">
+            <img src="/itis3135/images/cosmiclynx.png" alt="Cosmic Lynx Logo">
+            <h2>Cosmic Lynx</h2>
+        </div>
         <nav>
             <a href="index.html" rel="home-link">Home</a> 
             <a href=""  rel="introduction-link">Introduction</a> 
@@ -132,7 +149,6 @@
     <main>
         <div class="main-text">
             <h1><em>Eyes of the future</em></h1>
-            <p>Here at Cosmic Lynx, we design and sell next-generation drones that combine speed, agility, and intelligent design for missions from urban delivery to space exploration.</p>
             <a href="about.html" class="button">About Us</a>
         </div>
         <img src="/itis3135/images/cosmiclynx.png" alt="Cosmic Lynx Drone Logo">
