@@ -1,7 +1,7 @@
 body{
     font-family: Arial, sans-serif;
-    background-color: #f5f5dc;
-    color: #333333;
+    background-color: #fafaee;
+    color: #222;
     width: 90%;
     max-width: 900px;
     line-height: 1.6;
@@ -18,7 +18,7 @@ h1, h2 {
    
     
 }
-main p, h3 {
+main p, h3{
     text-align: left;
     
   
@@ -29,7 +29,7 @@ main p, h3 {
 
 
 header a, footer a {
-   color: #fff;
+   color: #ffffff;
     background: #b08b4f;
     padding: 0.3em 0.8em;
     border-radius: 6px;
@@ -43,6 +43,9 @@ header a:hover, footer a:hover {
     border: 1px solid #b08b4f;
     box-shadow: 0 6px 16px rgba(0,0,0,.15); 
 }
+main a {
+    color: #b08b4f;
+}
 
  main ul {
     text-align: left;
@@ -55,6 +58,8 @@ img {
     width: 400px;
     height: auto;
 }
+
+
 
 figure {
     font-style: italic;
