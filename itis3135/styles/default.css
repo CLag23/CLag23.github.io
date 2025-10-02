@@ -88,3 +88,12 @@ figure {
     margin-top: 10px;
     
 }
+
+table {
+    border-collapse: collapse; 
+    width: 100%;
+  }
+  th, td {
+    border: 1px solid;;
+    padding: 8px;
+  }
