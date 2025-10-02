@@ -10,6 +10,7 @@ body{
 }
 header {
     margin: 0;
+    padding: 20px 0 10px 0;
 }
 
 h1, h2 {
@@ -45,6 +46,7 @@ header a:hover, footer a:hover {
 }
 main a {
     color: #b08b4f;
+    
 }
 
  main ul {
