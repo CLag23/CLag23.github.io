@@ -8,6 +8,44 @@ body{
     margin: 0 auto;
     text-align: center;
 }
+
+@media screen and (min-width: 601px) and (max-width: 980px) {
+    body {
+        background-color: #f0f0e8;
+    }
+
+    img {
+        width: 300px;
+    }
+
+    main, header, footer{
+        text-align: center;
+        padding: 10px;
+    }
+    
+}
+
+@media screen and (max-width: 600px) {
+    body{
+        width: 100%;
+        font-size: 0.95em;
+        background-color: #fffdf6;
+    }
+    img {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    table {
+        font-size: 0.85em;
+    }
+
+    header a, footer a {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
 header {
     margin: 0;
     padding: 20px 0 10px 0;
