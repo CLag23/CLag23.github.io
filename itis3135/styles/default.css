@@ -18,6 +18,14 @@ body{
         width: 300px;
     }
 
+    header nav {
+        display: flex;
+        flex-wrap: wrap;;
+        justify-content: center;
+        gap:0.5rem;
+        
+    }
+
     main, header, footer{
         text-align: center;
         padding: 10px;
@@ -60,11 +68,7 @@ h1, h2 {
 main p, h3{
     text-align: left;
     
-  
-  
 }
-
-
 
 
 header a, footer a {
@@ -98,7 +102,6 @@ img {
     width: 400px;
     height: auto;
 }
-
 
 
 figure {
