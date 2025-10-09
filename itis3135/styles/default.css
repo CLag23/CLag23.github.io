@@ -76,6 +76,7 @@ header a, footer a {
     background: #b08b4f;
     padding: 0.3em 0.8em;
     border-radius: 6px;
+    border: 1px solid #b08b4f;
     transition:  0.2s, color 0.2s;
     text-decoration: none;
 }
@@ -109,25 +110,24 @@ figure {
     text-align: center;
 }
 
-.design-by {
+footer p:last-of-type a{
     background: none;
     transition: none;
     padding: 0;
+    border: none;
     border-radius: 0;
     color: #333333;
     text-decoration: underline;
 }
-.design-by:hover {
+footer p:last-of-type a:hover {
     background: none;
     color: blue;
     text-decoration: underline;
     border: none;
     box-shadow: none; 
-}   
-
+}       
 .sub-nav {
     margin-top: 10px;
-    
 }
 
 table {
