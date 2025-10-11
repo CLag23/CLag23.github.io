@@ -5,19 +5,201 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gardening</title>
     <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #fafaee;
+            color: #222;
+            width: 90%;
+            max-width: 900px;
+            line-height: 1.6;
+            margin: 0 auto;
+            text-align: left;
+        }
+        header nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        img {
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,.1);
+            width: 400px;
+            height: auto;
+        }
+        figure {
+            font-style: italic;;
+        }
+
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 1rem;
+        }
+        caption {
+            font-weight: bold;
+            margin: 0.5rem;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 8px;
+            text-align: left;
+        }
+
+        @media screen and (min-width: 601px) and (max-width: 980px) {
+            body {
+                background-color: #f0f0e8;
+            }
+            img {
+                width: 300px;
+            }
+            header nav {
+                display: flex;
+                flex-wrap: wrap;;
+                justify-content: center;
+                gap:0.5rem;
+        
+            }
+            main, header, footer{
+                text-align: center;
+                padding: 10px;
+            }
+    
+        }
+
+        @media screen and (max-width: 600px) {
+            body{
+                width: 100%;
+                font-size: 0.95em;
+                background-color: #fffdf6;
+            }
+            img {
+                width: 100%;
+                max-width: 250px;
+            }
+            table {
+                font-size: 0.85em;
+            }
+
+            header a, footer a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+
 
     </style>
 </head>
 <body>
     <header>
         <h1>Gardening</h1>
+        <nav>
+            <button onclick="showPage('home')">Home</button> 🍅
+            <button onclick="showPage('season')">Season</button> ☀️
+            <button onclick="showPage('location')">Location</button> 🏡
+            <button onclick="showPage('how')">How</button> ⛏️
+            <button onclick="showPage('why')">Why</button> 👨‍👩‍👧‍👦
+            <button onclick="showPage('ai')">Ai-Prompts</button> 🤖
+        </nav>
     </header>
 
-    <main></main>
+    <main>
+        <section id="home" class="page">
+            <h2> First Time Gardening</h2>
+            <figure>
+                <img src="./images/fullGarden.jpg" alt="picture of my garden">
+                <figcaption>Week 9 of my garden</figcaption>
+            </figure>
+            
+            <p> On this page, I will walk you through my experience gardening for the first time. 
+                I will discuss the times or seasons I started gardening, where I planted my plants, 
+                the tools and materials I used, and why I decided to start gardening.
+            </p>
+        </section>
+
+        <section id="season" class="page" style="display: none;">
+            <h2>Season</h2>
+            <p>
+                The best time to start gardening in the U.S. is in spring, which is what I did. 
+                This is when the soil begins to warm up and the days start getting longer. 
+                Additionally, many vegetables, herbs, and flowers thrive when planted after the last frost.
+            </p>
+        </section>
+
+        <section id="location" class="page" style="display: none;">
+            <h2>Location</h2>
+            <p>
+                Choosing the right location to start my garden was one of the most important steps for its success. 
+                I decided to plant my garden in my backyard because it receives 6 to 8 hours of direct sunlight, 
+                has good access to water making watering easy, is protected from harsh winds, and is easily 
+                accessible for me to tend to my plants.        
+            </p>
+        </section>
+
+        <section id="how" class="page" style="display: none;">
+            <h2>How Did I Start</h2>
+            <p>
+                There are many gardening styles to choose from, depending on your space, budget, and goals. 
+                Some popular styles include traditional in-ground gardening, raised bed gardening, container gardening, 
+                vertical gardening, and hydroponic gardening. I chose to create a raised bed garden using the square foot method 
+                because it is beginner-friendly, easy to access, and allows for better control over weeds and pests. 
+                To start my garden, I used a variety of tools and materials, including gardening gloves, 
+                a measuring tape, a pencil, a shovel, a saw, a drill, lumber, soil, compost, and string.
+            </p>
+            <table>
+                <caption></caption>
+                <thead>
+                    <tr>
+                        <th>Tool/materials</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
+        
+
+            </table>
+        </section>
+
+        <section id="why" class="page" style="display: none;">
+            <h2>Why</h2>
+            <p>
+                I decided to start gardening for several reasons. First, I wanted to learn how to grow my own fresh and healthy produce, 
+                which is often more nutritious and flavorful than store-bought options. Second, I was inspired by a relative who had 
+                years of experience in gardening and generously shared their knowledge and passion with me. Finally, I wanted to find something 
+                new to do during the summer, and gardening seemed like an enjoyable activity that doesn’t require too much maintenance if set up correctly.
+            </p>
+        </section>
+
+        <section id="ai" class="page" style="display: none">
+            <h2>AI Prompts</h2>
+            <p>Here are some prompts I used to build this page.</p>
+            <ul>
+                <li>"What are some ways to make it seem like there are multiple pages in one HTML doc" </li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+
+
+    </main>
 
     <footer>
          <p>Designed by <a href="../carlsenterprise.site/index.html" target="_blank">carlsenterprise</a> &copy; 2025</p>
          <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+         <script>
+            function showPage(pageId) {
+                document.querySelectorAll('.page').forEach((section) =>  {
+                    section.style.display = section.id === pageId ? 'block' : 'none';
+                });
+            }
+         </script>
     </footer>
     
 </body>
