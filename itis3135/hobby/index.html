@@ -28,8 +28,15 @@
             width: 400px;
             height: auto;
         }
+        .image-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+        }
         figure {
-            font-style: italic;;
+            font-style: italic;
+        
         }
 
         table {
@@ -107,19 +114,30 @@
     <main>
         <section id="home" class="page">
             <h2> First Time Gardening</h2>
+            
             <figure>
                 <img src="./images/fullGarden.jpg" alt="picture of my garden">
                 <figcaption>Week 9 of my garden</figcaption>
             </figure>
-            
+
+        
             <p> On this page, I will walk you through my experience gardening for the first time. 
                 I will discuss the times or seasons I started gardening, where I planted my plants, 
                 the tools and materials I used, and why I decided to start gardening.
             </p>
+
+            <img src="./images/fullGarden.jpg" class="slide" alt="My garden full view" style="display:block;">
+            <img src="./images/gardenTwo.jpg" class="slide" alt="Garden location" style="display:none;">
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
         </section>
 
         <section id="season" class="page" style="display: none;">
             <h2>Season</h2>
+            <figure>
+                <img src="./images/springField.png" alt="picture of a field">
+                <figcaption> Spring Field</figcaption>
+            </figure>
             <p>
                 The best time to start gardening in the U.S. is in spring, which is what I did. 
                 This is when the soil begins to warm up and the days start getting longer. 
@@ -129,6 +147,10 @@
 
         <section id="location" class="page" style="display: none;">
             <h2>Location</h2>
+            <figure>
+                <img src="./images/gardenTwo.jpg" alt="picture of garden location">
+                <figcaption>The Location of my garden</figcaption>
+            </figure>
             <p>
                 Choosing the right location to start my garden was one of the most important steps for its success. 
                 I decided to plant my garden in my backyard because it receives 6 to 8 hours of direct sunlight, 
@@ -139,13 +161,18 @@
 
         <section id="how" class="page" style="display: none;">
             <h2>How Did I Start</h2>
+            <figure>
+                <img src="./images/gridGarden.JPG" alt="grid garden picture" >
+                <figcaption>My garden at week one</figcaption>
+            </figure>
+            
             <p>
                 There are many gardening styles to choose from, depending on your space, budget, and goals. 
                 Some popular styles include traditional in-ground gardening, raised bed gardening, container gardening, 
                 vertical gardening, and hydroponic gardening. I chose to create a raised bed garden using the square foot method 
                 because it is beginner-friendly, easy to access, and allows for better control over weeds and pests. 
                 To start my garden, I used a variety of tools and materials, including gardening gloves, 
-                a measuring tape, a pencil, a shovel, a saw, a drill, lumber, soil, compost, and string.
+                a measuring tape, a pencil, a shovel, a saw, a drill, lumber, Top soil, compost, and string.
             </p>
             <table>
                 <caption></caption>
@@ -157,8 +184,44 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td></td>
-                        <td></td>
+                        <td>Graden Gloves</td>
+                        <td>Prevent my hand from getting dirty</td>
+                    </tr>
+                    <tr>
+                        <td>Measuring Tape</td>
+                        <td>Measure garden area</td>
+                    </tr>
+                    <tr>
+                        <td>Lumber</td>
+                        <td>For the Structure of the bed </td>
+                    </tr>
+                    <tr>
+                        <td>Top Soil</td>
+                        <td>Materials to support plant growth</td>
+                    </tr>
+                    <tr>
+                        <td>Compost</td>
+                        <td>Decomposed orgain matter for plants</td>
+                    </tr>
+                    <tr>
+                        <td>Pencil</td>
+                        <td>Make marks on lumber when measuring</td>
+                    </tr>
+                    <tr>
+                        <td>Shovel</td>
+                        <td>Loosen up the soil</td>
+                    </tr>
+                    <tr>
+                        <td>Saw</td>
+                        <td>Cut lumber to proper size</td>
+                    </tr>
+                    <tr>
+                        <td>Drill</td>
+                        <td>Drill lumber together</td>
+                    </tr>
+                    <tr>
+                        <td>String</td>
+                        <td>Helped in making the grid like layout</td>
                     </tr>
                 </tbody>
         
@@ -199,6 +262,22 @@
                     section.style.display = section.id === pageId ? 'block' : 'none';
                 });
             }
+
+            let currentSlide = 0;
+  const slides = document.querySelectorAll('.slide');
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.style.display = i === index ? 'block' : 'none';
+    });
+  }
+
+  function changeSlide(direction) {
+    currentSlide = (currentSlide + direction + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+
+
          </script>
     </footer>
     
