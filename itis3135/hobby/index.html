@@ -21,13 +21,18 @@
             flex-wrap: wrap;
             gap: 0.5rem;
         }
+        h1, h2 {
+            text-align: center;
+        }
         
         img {
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,.1);
             width: 400px;
             height: auto;
+
         }
+        
         .image-row {
             display: flex;
             flex-wrap: wrap;
@@ -36,7 +41,7 @@
         }
         figure {
             font-style: italic;
-        
+            text-align:center;        
         }
 
         table {
@@ -52,6 +57,11 @@
             border: 1px solid #333;
             padding: 8px;
             text-align: left;
+        }
+        .season-tables {
+            display: flex;
+            justify-content: left;  
+            flex-wrap: wrap; 
         }
 
         @media screen and (min-width: 601px) and (max-width: 980px) {
@@ -86,7 +96,7 @@
                 max-width: 250px;
             }
             table {
-                font-size: 0.85em;
+                font-size: 0.85em;  
             }
 
             header a, footer a {
@@ -126,8 +136,9 @@
                 the tools and materials I used, and why I decided to start gardening.
             </p>
 
-            <img src="./images/fullGarden.jpg" class="slide" alt="My garden full view" style="display:block;">
-            <img src="./images/gardenTwo.jpg" class="slide" alt="Garden location" style="display:none;">
+            <img src="./images/jalapenos.jpg" class="slide" alt="picture of jalapeno plant" style="display:block;">
+            <img src="./images/carrot.jpg" class="slide" alt="picture of eggplant" style="display:none;">
+            <img src="./images/eggplantTwo.jpg" class="slide" alt="picture of eggplant plant" style="display:none;">
             <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
             <button class="next" onclick="changeSlide(1)">&#10095;</button>
         </section>
@@ -139,10 +150,68 @@
                 <figcaption> Spring Field</figcaption>
             </figure>
             <p>
-                The best time to start gardening in the U.S. is in spring, which is what I did. 
-                This is when the soil begins to warm up and the days start getting longer. 
-                Additionally, many vegetables, herbs, and flowers thrive when planted after the last frost.
+               The best time to start gardening in the U.S. is usually in spring, which is when I got started. 
+               As the weather warms up and the days get longer, the soil starts to thaw out and becomes perfect for planting. 
+               Spring also comes right after the last frost, so it’s a safer time to put plants in the ground without worrying 
+               about them freezing overnight. A lot of veggies like lettuce, peas, and spinach love the cooler spring temps, while others like 
+               tomatoes, peppers, and squash do best once it gets a bit warmer. It’s the perfect season to kick things off and watch everything come to life 🌱☀️
             </p>
+            <div class="season-tables">
+            <table style= "width: 25%; border-collapse: collapse; margin: 1rem;">
+                <caption>Cool-season vegetables</caption>
+                <thead>
+                    <tr>
+                        <th>Vegetables</th>
+                        <th>Ideal air temp(°F)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lettuce</td>
+                        <td>45-70</td>
+                    </tr>
+                    <tr>
+                        <td>Carrots</td>
+                        <td>50-70</td>
+                    </tr>
+                    <tr>
+                        <td>Cabbage</td>
+                        <td>50-70</td>
+                    </tr>
+                    <tr>
+                        <td>Onions</td>
+                        <td>55-75</td>
+                    </tr>
+                </tbody>
+            </table >
+            <table style= "width: 25%; border-collapse: collapse; margin: 1rem;">
+                <caption>Warm-season vegetables</caption>
+                <thead>
+                    <tr>
+                        <th>Vegetables</th>
+                        <th>Ideal air temp(°F)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tomatoes</td>
+                        <td>70-85</td>
+                    </tr>
+                    <tr>
+                        <td>Eggplant</td>
+                        <td>75-90</td>
+                    </tr>
+                    <tr>
+                        <td>Peppers</td>
+                        <td>70-90</td>
+                    </tr>
+                    <tr>
+                        <td>Orka</td>
+                        <td>75-95</td>
+                    </tr>
+                </tbody>
+            </table >
+            </div>
         </section>
 
         <section id="location" class="page" style="display: none;">
