@@ -21,23 +21,62 @@
             flex-wrap: wrap;
             gap: 0.5rem;
         }
+        header button {
+            background: #6b8e23;
+            color: white;
+            border: 1px solid transparent;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            
+        }
+        header button:hover {
+            background: #556b2f;
+            text-decoration: none;
+            border: 1px solid #6b8e23;
+            box-shadow: 0 6px 16px rgba(0,0,0,.15); 
+        }
         h1, h2 {
+            color: #556b2f;
             text-align: center;
         }
-        
+        section {
+            background: white;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 12px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+        }
         img {
+            display: block;
+            margin: 1rem auto;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,.1);
             width: 400px;
             height: auto;
 
         }
-        
-        .image-row {
+        .slideshow {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-direction: column;  
+            align-items: center;   
+            margin: 1rem auto;
+          
+            
+        }
 
+        .slideshow img {
+            margin: 0;           
+            width: 400px;  
+            display: block;     
+            border-radius: 8px;
+        }
+         
+        iframe {
+            display:block;
+            margin: 1rem auto;
+            max-width: 100%;
         }
         figure {
             font-style: italic;
@@ -45,14 +84,20 @@
         }
 
         table {
-            width: 70%;
+            width: 80%;
             border-collapse: collapse;
-            margin: 1rem;
+            margin: 1rem auto;
+            color: #556b2f;
+            background-color: white;
+            overflow: hidden;
+            text-align: center;
+            
         }
-        caption {
-            font-weight: bold;
-            margin: 0.5rem;
+        table thead {
+            color: white;
+            background-color: #556b2f ;
         }
+        
         th, td {
             border: 1px solid #333;
             padding: 8px;
@@ -60,9 +105,21 @@
         }
         .season-tables {
             display: flex;
-            justify-content: left;  
+            justify-content: center;  
             flex-wrap: wrap; 
         }
+        footer {
+            text-align: center;
+        }
+        footer a {
+            color: #556b2f;
+            text-decoration: none;
+        }
+        footer a:hover{
+            color: #556b2f;
+            text-decoration: underline;
+        }
+
 
         @media screen and (min-width: 601px) and (max-width: 980px) {
             body {
@@ -99,6 +156,11 @@
                 font-size: 0.85em;  
             }
 
+            iframe {
+                max-width: 100%;
+                
+            }
+
             header a, footer a {
                 display: block;
                 margin: 10px 0;
@@ -112,9 +174,10 @@
     <header>
         <h1>Gardening</h1>
         <nav>
-            <button onclick="showPage('home')">Home</button> 🍅
-            <button onclick="showPage('season')">Season</button> ☀️
-            <button onclick="showPage('location')">Location</button> 🏡
+            <button onclick="showPage('who')">Who</button> 🪴
+            <button onclick="showPage('home')">What</button> 🍅 
+            <button onclick="showPage('season')">When</button> ☀️
+            <button onclick="showPage('location')">Where</button> 🏡
             <button onclick="showPage('how')">How</button> ⛏️
             <button onclick="showPage('why')">Why</button> 👨‍👩‍👧‍👦
             <button onclick="showPage('ai')">Ai-Prompts</button> 🤖
@@ -122,6 +185,20 @@
     </header>
 
     <main>
+        <section id="who" class="page" style="display: none;">
+            <h2> ....</h2>
+            
+            <figure>
+               
+            </figure>
+
+        
+            <p> 
+            </p>
+
+           
+            
+        </section>
         <section id="home" class="page">
             <h2> First Time Gardening</h2>
             
@@ -131,16 +208,21 @@
             </figure>
 
         
-            <p> On this page, I will walk you through my experience gardening for the first time. 
-                I will discuss the times or seasons I started gardening, where I planted my plants, 
-                the tools and materials I used, and why I decided to start gardening.
+            <p> On this page, I’ll walk you through when I decided to plant (and why timing matters), the specific spot I chose in my yard, 
+                and how I set everything up from scratch. I’ll also go over the basic tools and materials that helped me get started, 
+                plus a bit of the thought process behind each choice. And finally, I’ll talk about what inspired me to give gardening a try
+                 in the first place and how it’s grown into something I really enjoy.
             </p>
 
+            <div class="slideshow">
             <img src="./images/jalapenos.jpg" class="slide" alt="picture of jalapeno plant" style="display:block;">
             <img src="./images/carrot.jpg" class="slide" alt="picture of eggplant" style="display:none;">
             <img src="./images/eggplantTwo.jpg" class="slide" alt="picture of eggplant plant" style="display:none;">
+            
             <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
             <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+            
         </section>
 
         <section id="season" class="page" style="display: none;">
@@ -162,7 +244,7 @@
                 <thead>
                     <tr>
                         <th>Vegetables</th>
-                        <th>Ideal air temp(°F)</th>
+                        <th>Ideal air temp(&deg;F)</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -189,7 +271,7 @@
                 <thead>
                     <tr>
                         <th>Vegetables</th>
-                        <th>Ideal air temp(°F)</th>
+                        <th>Ideal air temp(&deg;F)</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -206,7 +288,7 @@
                         <td>70-90</td>
                     </tr>
                     <tr>
-                        <td>Orka</td>
+                        <td>Okra</td>
                         <td>75-95</td>
                     </tr>
                 </tbody>
@@ -226,14 +308,31 @@
                 has good access to water making watering easy, is protected from harsh winds, and is easily 
                 accessible for me to tend to my plants.        
             </p>
+
+
+            <p><b>Location checklist</b></p>
+            <ul>
+                <li>Sunlight hours</li>
+                <li>Water access</li>
+                <li>Wind Protection</li>
+                <li>Drainage</li>
+            </ul>
         </section>
 
         <section id="how" class="page" style="display: none;">
             <h2>How Did I Start</h2>
-            <figure>
-                <img src="./images/gridGarden.JPG" alt="grid garden picture" >
-                <figcaption>My garden at week one</figcaption>
-            </figure>
+
+            <iframe
+                width="560"
+                height="325"
+                src="https://www.youtube.com/embed/jL5FtbS4Jeo"
+                title="youtube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+            >
+
+            </iframe>
+            
             
             <p>
                 There are many gardening styles to choose from, depending on your space, budget, and goals. 
@@ -244,7 +343,7 @@
                 a measuring tape, a pencil, a shovel, a saw, a drill, lumber, Top soil, compost, and string.
             </p>
             <table>
-                <caption></caption>
+                
                 <thead>
                     <tr>
                         <th>Tool/materials</th>
@@ -253,7 +352,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Graden Gloves</td>
+                        <td>Garden Gloves</td>
                         <td>Prevent my hand from getting dirty</td>
                     </tr>
                     <tr>
@@ -300,21 +399,35 @@
 
         <section id="why" class="page" style="display: none;">
             <h2>Why</h2>
+            <figure>
+                <img src="./images/raisedGarden.png" alt="picture of raised garden">
+                <figcaption>Raised Garden</figcaption>
+            </figure>
+        
             <p>
                 I decided to start gardening for several reasons. First, I wanted to learn how to grow my own fresh and healthy produce, 
                 which is often more nutritious and flavorful than store-bought options. Second, I was inspired by a relative who had 
                 years of experience in gardening and generously shared their knowledge and passion with me. Finally, I wanted to find something 
                 new to do during the summer, and gardening seemed like an enjoyable activity that doesn’t require too much maintenance if set up correctly.
             </p>
+
+            <figure>
+                <img src="./images/gridGarden.JPG" alt="grid garden picture" >
+                <figcaption>My garden at week one</figcaption>
+            </figure>
         </section>
 
         <section id="ai" class="page" style="display: none">
             <h2>AI Prompts</h2>
+            <figure>
+                <img src="./images/ai.png" alt="image of ai">
+            <figcaption>AI Generated Image</figcaption>
+            </figure>
             <p>Here are some prompts I used to build this page.</p>
             <ul>
-                <li>"What are some ways to make it seem like there are multiple pages in one HTML doc" </li>
-                <li></li>
-                <li></li>
+                <li>"What are some ways to make it seem like there are multiple pages in one HTML doc"(ChatGPT) </li>
+                <li>"Generate a picture of a raised garden bed"(ChatGPT)</li>
+                <li>"How do I implement a simple slideshow in my HTML page"(ChatGPT)</li>
                 <li></li>
             </ul>
         </section>

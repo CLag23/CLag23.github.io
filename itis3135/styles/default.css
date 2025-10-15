@@ -34,7 +34,7 @@ main p, h3{
 header a, footer a {
    color: #ffffff;
     background: #b08b4f;
-    padding: 0.3em 0.8em;
+    padding: 0.5rem 1rem;
     border-radius: 6px;
     border: 1px solid #b08b4f;
     transition:  0.2s, color 0.2s;
@@ -52,7 +52,7 @@ main a {
     
 }
 
- main ul {
+main ul {
     text-align: left;
     
 }
@@ -94,11 +94,12 @@ table {
     border-collapse: collapse; 
     width: 100%;
   }
-  th, td {
+th, td {
     border: 1px solid;;
     padding: 8px;
-  }
+}
 
+/*  Tabelts and small laptops size adjustments*/
 @media screen and (min-width: 601px) and (max-width: 980px) {
     body {
         background-color: #f0f0e8;
@@ -120,9 +121,10 @@ table {
         text-align: center;
         padding: 10px;
     }
-    
 }
 
+
+/*  phone size adjustments*/
 @media screen and (max-width: 600px) {
     body{
         width: 100%;
