@@ -58,17 +58,16 @@
 
         }
         .slideshow {
-            display: flex;
-            flex-direction: column;  
-            align-items: center;   
+            position: relative;
+            width: 100%;
+            max-width: 400px;
             margin: 1rem auto;
           
             
         }
 
-        .slideshow img {
-            margin: 0;           
-            width: 400px;  
+        .slideshow img {         
+            width: 100%;  
             display: block;     
             border-radius: 8px;
         }
@@ -77,6 +76,8 @@
             display:block;
             margin: 1rem auto;
             max-width: 100%;
+            border: none;
+            border-radius: 8px;
         }
         figure {
             font-style: italic;
@@ -186,19 +187,31 @@
 
     <main>
         <section id="who" class="page" style="display: none;">
-            <h2> ....</h2>
+            <h2> Who</h2>
             
             <figure>
+                <img src="./images/planningGarden.png" alt="picture of gloves and tools" >
+                <figcaption>"Generate a picture of gardening supplies"(Model: ChatGPT-5).</figcaption>
                
             </figure>
-
         
-            <p> 
+            <p> I started planning for this garden in late January, when the weather was still cool. 
+                The first thing I did was make a list of all the plants I wanted to grow a mix of veggies 
+                like tomatoes, peppers, and carrots. Then I headed outside with a tape measure to 
+                figure out the exact dimensions of the spot where I’d build the raised garden bed. 
+                I sketched out a rough layout and even calculated how many bags of soil it would take to fill 
+                it up properly. Along the way, I also wrote down every tool I’d need for building the bed. 
+                Once I had everything planned out and organized, I shared my idea with my mom. She loved it and decided to 
+                jump in and help me bring the whole thing to life.💡
             </p>
 
-           
-            
+            <p><b>People Involed</b></p>
+            <ul>
+                <li>Myself</li>
+                <li>Mom</li>
+            </ul>
         </section>
+
         <section id="home" class="page">
             <h2> First Time Gardening</h2>
             
@@ -207,22 +220,19 @@
                 <figcaption>Week 9 of my garden</figcaption>
             </figure>
 
-        
-            <p> On this page, I’ll walk you through when I decided to plant (and why timing matters), the specific spot I chose in my yard, 
+            <p> On this page, I’ll walk you through when I decided to plant and why timing matters, the specific spot I chose in my yard, 
                 and how I set everything up from scratch. I’ll also go over the basic tools and materials that helped me get started, 
                 plus a bit of the thought process behind each choice. And finally, I’ll talk about what inspired me to give gardening a try
-                 in the first place and how it’s grown into something I really enjoy.
+                 in the first place and how it’s grown into something I really enjoy. ☘️
             </p>
 
             <div class="slideshow">
-            <img src="./images/jalapenos.jpg" class="slide" alt="picture of jalapeno plant" style="display:block;">
-            <img src="./images/carrot.jpg" class="slide" alt="picture of eggplant" style="display:none;">
-            <img src="./images/eggplantTwo.jpg" class="slide" alt="picture of eggplant plant" style="display:none;">
-            
-            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
-            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+                <img src="./images/jalapenos.jpg" class="slide" alt="picture of jalapeno plant" style="display:block;">
+                <img src="./images/carrot.jpg" class="slide" alt="picture of eggplant" style="display:none;">
+                <img src="./images/eggplantTwo.jpg" class="slide" alt="picture of eggplant plant" style="display:none;">
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
             </div>
-            
         </section>
 
         <section id="season" class="page" style="display: none;">
@@ -306,10 +316,8 @@
                 Choosing the right location to start my garden was one of the most important steps for its success. 
                 I decided to plant my garden in my backyard because it receives 6 to 8 hours of direct sunlight, 
                 has good access to water making watering easy, is protected from harsh winds, and is easily 
-                accessible for me to tend to my plants.        
+                accessible for me to tend to my plants.🌞   
             </p>
-
-
             <p><b>Location checklist</b></p>
             <ul>
                 <li>Sunlight hours</li>
@@ -325,22 +333,19 @@
             <iframe
                 width="560"
                 height="325"
-                src="https://www.youtube.com/embed/jL5FtbS4Jeo"
+                src="https://www.youtube-nocookie.com/embed/jL5FtbS4Jeo?"
                 title="youtube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen
             >
-
             </iframe>
-            
-            
             <p>
                 There are many gardening styles to choose from, depending on your space, budget, and goals. 
                 Some popular styles include traditional in-ground gardening, raised bed gardening, container gardening, 
                 vertical gardening, and hydroponic gardening. I chose to create a raised bed garden using the square foot method 
                 because it is beginner-friendly, easy to access, and allows for better control over weeds and pests. 
                 To start my garden, I used a variety of tools and materials, including gardening gloves, 
-                a measuring tape, a pencil, a shovel, a saw, a drill, lumber, Top soil, compost, and string.
+                a measuring tape, a pencil, a shovel, a saw, a drill, lumber, Top soil, compost, and string.✏️
             </p>
             <table>
                 
@@ -401,16 +406,15 @@
             <h2>Why</h2>
             <figure>
                 <img src="./images/raisedGarden.png" alt="picture of raised garden">
-                <figcaption>Raised Garden</figcaption>
+                <figcaption>"Generate a picture of a raised garden bed" (Model: ChatGPT-5).</figcaption>
             </figure>
         
             <p>
                 I decided to start gardening for several reasons. First, I wanted to learn how to grow my own fresh and healthy produce, 
                 which is often more nutritious and flavorful than store-bought options. Second, I was inspired by a relative who had 
                 years of experience in gardening and generously shared their knowledge and passion with me. Finally, I wanted to find something 
-                new to do during the summer, and gardening seemed like an enjoyable activity that doesn’t require too much maintenance if set up correctly.
+                new to do during the summer, and gardening seemed like an enjoyable activity that doesn’t require too much maintenance if set up correctly.🪴
             </p>
-
             <figure>
                 <img src="./images/gridGarden.JPG" alt="grid garden picture" >
                 <figcaption>My garden at week one</figcaption>
@@ -423,16 +427,12 @@
                 <img src="./images/ai.png" alt="image of ai">
             <figcaption>AI Generated Image</figcaption>
             </figure>
-            <p>Here are some prompts I used to build this page.</p>
+            <p><b>Here are some prompts I used to build this page.</b></p>
             <ul>
-                <li>"What are some ways to make it seem like there are multiple pages in one HTML doc"(ChatGPT) </li>
-                <li>"Generate a picture of a raised garden bed"(ChatGPT)</li>
-                <li>"How do I implement a simple slideshow in my HTML page"(ChatGPT)</li>
-                <li></li>
+                <li>"What are some ways to make it seem like there are multiple pages in one HTML doc"(ChatGPT-5) </li>
+                <li>"How do I implement a simple slideshow in my HTML page"(ChatGPT-5)</li>
             </ul>
         </section>
-
-
     </main>
 
     <footer>
