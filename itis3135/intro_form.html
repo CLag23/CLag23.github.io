@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carls Laguerre 💠 Introduction Form</title>
+    <link rel="stylesheet" href="./styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+         <div data-include="components/header.html"></div>
+
+    </header>
+
+    <main>
+        <h2>Introduction Form</h2>
+        <h3>Please submit the form below</h3>
+
+        <form>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="firstName">First Name</label>
+                <input 
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    placeholder="Enter your first Name"
+                    required
+                />
+                <label for="middleName">Middle Name</label>
+                <input 
+                    type="text"
+                    id="middleName"
+                    name="middleName"
+                    placeholder="Enter your Middle Name"
+                    
+                />
+                <label for="lastName">Last Name</label>
+                <input 
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    placeholder="Enter your Last Name"
+                    required
+                />
+                <label for="ackSatement">Acknowledgment Statement</label>
+                <textarea 
+                    id="ackSatement" 
+                    name="ackSatement" 
+                    placeholder="Type your acknowledgment statement here..."
+                    required
+                ></textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Mascot & Theme</legend>
+
+                <label for="mascotAdj">Mascot Adjective</label>
+                <input 
+                    type="text"
+                    id="mascotAdj"
+                    name="mascotAdj"
+                    value="Cosmic"
+                    placeholder="Enter Mascot Adjective"
+                    required
+                />
+
+                <label for="mascotAnimal">Mascot Animal</label>
+                <input 
+                    type="text"
+                    id="mascotAnimal"
+                    name="mascotAnimal"
+                    value="Lynx"
+                    placeholder="Enter Mascot Animal"
+                    required
+                />
+
+                <label for="divider">Divider (ie, ~, |, ♥️, etc)</label>
+                <input 
+                    type="text"
+                    id="divider"
+                    name="divider"
+                    value="💎"
+                    placeholder="Enter Divider Symbol"
+                    required
+                />
+            </fieldset>
+
+            <fieldset>
+                <legend>Picture & Description</legend>
+
+                <label for="picture">Picture</label>
+                <input 
+                    type="file"
+                    id="picture"
+                    name="picture"
+                    accept="image/*"
+                />
+
+                <label for="caption">Picture Caption</label>
+                <input 
+                    type="text"
+                    id="caption"
+                    name="caption"
+                    value="Carls Laguerre Cosmic Lynx"
+                    placeholder="Enter Picture Caption"
+                />
+
+                <label for="personalStatement">Personal Statement</label>
+                <textarea 
+                    id="personalStatement"
+                    name="personalStatement"
+                    placeholder="Write your personal statement here..."
+                >Eyes of the future</textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Courses & Sub-bullets</legend>
+
+                <label for="course1Dept">Department</label>
+                <input 
+                    type="text"
+                    id="course1Dept"
+                    name="course1Dept"
+                    value="ITIS"
+                    placeholder="Enter Department (e.g., ITIS)"
+                />
+
+                <label for="course1Num">Number</label>
+                <input 
+                    type="text"
+                    id="course1Num"
+                    name="course1Num"
+                    value="3135"
+                    placeholder="Enter Course Number"
+                />
+
+                <label for="course1Name">Name</label>
+                <input 
+                    type="text"
+                    id="course1Name"
+                    name="course1Name"
+                    value="Front-End Web App Development"
+                    placeholder="Enter Course Name"
+                />
+
+                <label for="course1Reason">Reason</label>
+                <textarea 
+                    id="course1Reason"
+                    name="course1Reason"
+                    placeholder="Why are you taking this course?"
+                >To improve my front-end development skills and build responsive websites.</textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Quote</legend>
+
+                <label for="quote">Favorite Quote</label>
+                <input 
+                    type="text"
+                    id="quote"
+                    name="quote"
+                    value="Simplicity is the soul of efficiency."
+                    placeholder="Enter your favorite quote"
+                />
+
+                <label for="quoteAuthor">Quote Author</label>
+                <input 
+                    type="text"
+                    id="quoteAuthor"
+                    name="quoteAuthor"
+                    value="Austin Freeman"
+                    placeholder="Enter quote author"
+                />
+            </fieldset>
+
+            <fieldset>
+                <legend>Fun & Extras</legend>
+
+                <label for="funnyThing">Funny Thing </label>
+                <input 
+                    type="text"
+                    id="funnyThing"
+                    name="funnyThing"
+                    placeholder="Something funny about you"
+                />
+
+                <label for="somethingShare">Something I'd Like to Share </label>
+                <textarea 
+                    id="somethingShare"
+                    name="somethingShare"
+                    placeholder="Something you'd like to share..."
+                ></textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Links</legend>
+
+                <label for="linkedin">LinkedIn</label>
+                <input 
+                    type="url"
+                    id="linkedin"
+                    name="linkedin"
+                    value="https://www.linkedin.com/in/carlslaguerre"
+                    placeholder="Enter LinkedIn URL"
+                />
+
+                <label for="github">GitHub</label>
+                <input 
+                    type="url"
+                    id="github"
+                    name="github"
+                    value="https://github.com/CLag23"
+                    placeholder="Enter GitHub URL"
+                />
+
+                <label for="githubPages">GitHub Pages</label>
+                <input 
+                    type="url"
+                    id="githubPages"
+                    name="githubPages"
+                    value="https://CLag23.github.io"
+                    placeholder="Enter GitHub Pages URL"
+                />
+
+                <label for="cltWeb">CLT Web</label>
+                <input 
+                    type="url"
+                    id="cltWeb"
+                    name="cltWeb"
+                    value="https://webpages.charlotte.edu/claguerre"
+                    placeholder="Enter CLT Web URL"
+                />
+
+                <label for="personalSite">Personal Website</label>
+                <input 
+                    type="url"
+                    id="personalSite"
+                    name="personalSite"
+                    value="https://carlsenterprise.com"
+                    placeholder="Enter Personal Website URL"
+                />
+            </fieldset>
+
+            <button type="submit">Submit</button>
+            
+            
+        </form>
+
+    </main>
+
+    <footer>
+        <div data-include="components/footer.html"></div>
+        <script src="scripts/htmlinclude.min.js"></script>
+    </footer>
+    
+</body>
+</html>

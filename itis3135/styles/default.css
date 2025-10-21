@@ -14,15 +14,17 @@ header {
     padding: 20px 0 10px 0;
 }
 
+
+
 h1, h2 {
     font-family: Georgia, 'Times New Roman', serif;
     text-align: center;
    
-    
 }
 main {
     max-width: 900px;
     margin: 0 auto;
+
 
 }
 main p, h3{
@@ -32,13 +34,14 @@ main p, h3{
 
 
 header a, footer a {
-   color: #ffffff;
+    color: #ffffff;
     background: #b08b4f;
-    padding: 0.5rem 1rem;
+    padding: 0.3rem 0.8rem;
     border-radius: 6px;
     border: 1px solid #b08b4f;
     transition:  0.2s, color 0.2s;
     text-decoration: none;
+    
 }
 header a:hover, footer a:hover {
     background: #fff;
@@ -99,6 +102,43 @@ th, td {
     padding: 8px;
 }
 
+form {
+    background-color: #fefdf6;
+    border: 1px solid #b08b4f;
+    border-radius: 8px;
+    max-width: 900px;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+fieldset {
+    border: 1px solid #b08b4f;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+    
+}
+
+
+
+legend {
+    font-weight: bold;
+    color: #b08b4f;
+    padding: 0 8px;
+}
+
+label {
+    display:contents;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+
 /*  Tabelts and small laptops size adjustments*/
 @media screen and (min-width: 601px) and (max-width: 980px) {
     body {
@@ -144,4 +184,10 @@ th, td {
         display: block;
         margin: 10px 0;
     }
+    fieldset {
+        flex-direction: column;
+    }
+
+    
+
 }
