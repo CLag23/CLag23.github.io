@@ -67,7 +67,6 @@ img {
     height: auto;
 }
 
-
 figure {
     font-style: italic;
     text-align: center;
@@ -106,7 +105,7 @@ form {
     background-color: #fefdf6;
     border: 1px solid #b08b4f;
     border-radius: 8px;
-    max-width: 900px;
+    max-width: 600px;
     padding: 20px;
     margin: 0 auto;
     text-align: left;
@@ -118,9 +117,15 @@ fieldset {
     padding: 15px 20px;
     margin-bottom: 20px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.2rem;
-    
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.course-group { 
+    display: flex; flex-direction: column; gap: 0.75rem; 
+}
+.course-group .delete-course-button { 
+    align-self: flex-start; 
 }
 
 
@@ -132,9 +137,24 @@ legend {
 }
 
 label {
-    display:contents;
+    display: block;
     font-weight: bold;
-    margin-top: 10px;
+    margin-top: 6px;
+    margin-bottom: 4px;
+}
+
+/* Inputs and textareas: full-width, one per line */
+
+form input {
+    display: block;
+    width: 35%;
+    
+}
+
+/* Textareas take almost whole width and have comfortable height */
+form textarea {
+    min-height: 50px;
+    resize: vertical;
 }
 
 

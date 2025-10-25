@@ -106,6 +106,13 @@
                     accept="image/*"
                 />
 
+                <img 
+                    id="picture-preview" 
+                    src="./images/mypic.jpg" 
+                    alt="Image Preview" 
+                    style="width:120px; margin-top:10px; border-radius:6px; border:1px solid #ccc;" />
+                
+
                 <label for="caption">Picture Caption</label>
                 <input 
                     type="text"
@@ -116,8 +123,46 @@
                 />
 
                 
-            </fieldset>
 
+
+                
+            </fieldset>
+            <fieldset>
+                <legend>Background</legend>
+
+                <label for="personalBackground">Personal Background</label>
+                <textarea       
+                    id="personalBackground"
+                    name="personalBackground"
+                    placeholder="Write your personal background herer..."
+                >I enjoy activities that involve moving around such as walking and working out. </textarea>
+            
+                <label for="professionalBackground">Professional Background</label>
+                <textarea 
+                    id="professionalBackground"
+                    name="professionalBackground"
+                    placeholder="Write your professional background here..."
+                >I don't have much technical experience besides working on personal projects</textarea>
+        
+                <label for="academicBackground">Academic Background</label>
+                <textarea 
+                    id="academicBackground"
+                    name="academicBackground"
+                    placeholder="Write your academic background here..."
+                >I transferred from CPCC(central piedmont community collage) with an associate in arts degree</textarea>
+            </fieldset>
+            <fieldset>
+                <legend>Primary Computer</legend>
+
+                <label for="primaryComputer">Primary Computer</label>
+                <input 
+                    type="text"
+                    id="primaryComputer"
+                    name="primaryComputer"
+                    value="Macbook Air M1"
+                    placeholder="Enter your primary computer"
+                />
+            </fieldset>
             <fieldset>
                 <legend>Courses & Sub-bullets</legend>
 
@@ -153,7 +198,7 @@
                     id="course1Reason"
                     name="course1Reason"
                     placeholder="Why are you taking this course?"
-                ></textarea>
+                >I want to learn how to create websites</textarea>
             </fieldset>
 
             <fieldset>
@@ -166,6 +211,15 @@
                     name="quote"
                     value="”We don't meet people by accident. They are meant to cross our paths for a reason ”"
                     placeholder="Enter your favorite quote"
+                />
+
+                <label for="quoteAuthor">Quote Author</label>
+                <input 
+                    type="text"
+                    id="quoteAuthor"
+                    name="quoteAuthor"
+                    value="Austin Freeman"
+                    placeholder="Enter quote author"
                 />
             </fieldset>
 
