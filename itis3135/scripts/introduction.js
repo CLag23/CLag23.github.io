@@ -202,7 +202,6 @@ function initIntroductionForm() {
       outputSection.id = "introductionOutput";
     }
     outputSection.innerHTML = outputHtml;
-
     
     if (!outputSection.isConnected && formElement.parentNode) {
       formElement.parentNode.insertBefore(outputSection, formElement);
