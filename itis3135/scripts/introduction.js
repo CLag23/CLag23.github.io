@@ -122,6 +122,7 @@ function buildIntroductionPreviewHtml(form) {
   const firstName = get("firstName").trim();
   const lastName = get("lastName").trim();
   const fullName = [firstName, lastName].filter(Boolean).join(" ");
+  const personalStatement = get("personalStatement").trim();
   const personalBackground = get("personalBackground").trim();
   const professionalBackground = get("professionalBackground").trim();
   const academicBackground = get("academicBackground").trim();
@@ -163,6 +164,8 @@ function buildIntroductionPreviewHtml(form) {
       <img src="${imageSrc}" alt="A picture of ${fullName || "me"}" width="200" height="300">
       <figcaption>${fullName || caption}</figcaption>
     </figure>
+
+    <p>${personalStatement || ""}</p>
 
     <h3>Personal Background</h3>
     <p>${personalBackground || ""}</p>
