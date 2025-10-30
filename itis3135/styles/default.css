@@ -142,6 +142,9 @@ label {
     margin-top: 6px;
     margin-bottom: 4px;
 }
+.json-output {
+    text-align: left;
+}
 
 /* Inputs and textareas: full-width, one per line */
 
