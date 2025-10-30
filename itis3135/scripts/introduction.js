@@ -1,6 +1,7 @@
 let coursesFieldset = null;
 let addCourseButton = null;
 let courseCount = 0;
+let initialCoursesMarkup = "";
 
 function wireClearButton(formElement) {
   const clearButton = formElement.querySelector("#clearButton");
@@ -129,7 +130,28 @@ function buildIntroductionPreviewHtml(form) {
   const primaryComputer = get("primaryComputer").trim();
   const previewImgEl = document.getElementById("picture-preview");
   const imageSrc = previewImgEl && previewImgEl.src ? previewImgEl.src : "./images/mypic.jpg";
-  const caption = get("caption").trim() || fullName || "";
+  const baseCaption = get("caption").trim();
+  const divider = get("divider").trim();
+  const mascotAdj = get("mascotAdj").trim();
+  const mascotAnimal = get("mascotAnimal").trim();
+  const mascotDisplay = [mascotAdj, mascotAnimal].filter(Boolean).join(" ").trim();
+  const decoratedNameParts = [];
+
+  if (fullName) {
+    decoratedNameParts.push(fullName);
+  }
+
+  if (divider && (decoratedNameParts.length || mascotDisplay)) {
+    decoratedNameParts.push(divider);
+  }
+
+  if (mascotDisplay) {
+    decoratedNameParts.push(mascotDisplay);
+  }
+
+  const decoratedName = decoratedNameParts.join(" ").trim();
+  const headingName = decoratedName || fullName;
+  const captionText = fullName;
 
   
   const courses = [];
@@ -159,10 +181,10 @@ function buildIntroductionPreviewHtml(form) {
     .join("\n");
 
   return `
-    <h2>${fullName || ""}</h2>
+    <h2>${headingName || ""}</h2>
     <figure>
-      <img src="${imageSrc}" alt="A picture of ${fullName || "me"}" width="200" height="300">
-      <figcaption>${fullName || caption}</figcaption>
+      <img src="${imageSrc}" alt="A picture of ${headingName || "me"}" width="200" height="300">
+      <figcaption>${captionText}</figcaption>
     </figure>
 
     <p>${personalStatement || ""}</p>
@@ -194,6 +216,11 @@ function initIntroductionForm() {
     return;
   }
 
+  const instructionsHeading =
+    formElement.previousElementSibling instanceof HTMLElement
+      ? formElement.previousElementSibling
+      : null;
+
   wireClearButton(formElement);
   
   formElement.addEventListener("submit", (event) => {
@@ -211,6 +238,9 @@ function initIntroductionForm() {
     }
     formElement.style.display = "none";
 
+    if (instructionsHeading) {
+      instructionsHeading.style.display = "none";
+    }
     
     const restart = outputSection.querySelector("#restartFormLink");
     if (restart) {
@@ -220,6 +250,9 @@ function initIntroductionForm() {
         
         formElement.reset();
         formElement.style.display = "";
+        if (instructionsHeading) {
+          instructionsHeading.style.display = "";
+        }
         const preview = formElement.querySelector('#picture-preview');
         if (preview) {
           preview.src = './images/mypic.jpg';
@@ -249,6 +282,16 @@ function initIntroductionForm() {
   courseCount = getExistingCourseCount(coursesFieldset);
   addCourseButton = ensureAddCourseButton(coursesFieldset);
 
+  coursesFieldset.querySelectorAll(".course-group").forEach((group) => {
+    if (!group.querySelector(".delete-course-button")) {
+      addDeleteButton(group);
+    }
+  });
+
+  if (!initialCoursesMarkup) {
+    initialCoursesMarkup = coursesFieldset.innerHTML;
+  }
+
   if (!addCourseButton.dataset.listenerAttached) {
     addCourseButton.addEventListener("click", addCourseTextBoxes);
     addCourseButton.dataset.listenerAttached = "true";
@@ -258,6 +301,42 @@ function initIntroductionForm() {
     coursesFieldset.addEventListener("click", handleCourseFieldsetClick);
     coursesFieldset.dataset.removeListenerAttached = "true";
   }
+
+  formElement.addEventListener("reset", () => {
+    if (instructionsHeading) {
+      instructionsHeading.style.display = "";
+    }
+
+    window.setTimeout(() => {
+      if (!coursesFieldset) {
+        return;
+      }
+
+      if (initialCoursesMarkup) {
+        coursesFieldset.innerHTML = initialCoursesMarkup;
+      }
+
+      coursesFieldset.querySelectorAll(".course-group").forEach((group) => {
+        if (!group.querySelector(".delete-course-button")) {
+          addDeleteButton(group);
+        }
+      });
+
+      courseCount = getExistingCourseCount(coursesFieldset);
+      addCourseButton = coursesFieldset.querySelector("#addCourseButton") || ensureAddCourseButton(coursesFieldset);
+
+      if (addCourseButton && !addCourseButton.dataset.listenerAttached) {
+        addCourseButton.addEventListener("click", addCourseTextBoxes);
+        addCourseButton.dataset.listenerAttached = "true";
+      }
+
+      const preview = formElement.querySelector("#picture-preview");
+      if (preview) {
+        preview.src = "./images/mypic.jpg";
+        preview.style.display = "block";
+      }
+    });
+  });
 }
 
 document.addEventListener("DOMContentLoaded", initIntroductionForm);
@@ -277,7 +356,3 @@ if (pictureInput && previewImage) {
     }
   });
 }
-
-
-
-

@@ -168,39 +168,149 @@
             <fieldset>
                 <legend>Courses & Sub-bullets</legend>
 
-                <label for="course1Dept">Department</label>
-                <input 
-                    type="text"
-                    id="course1Dept"
-                    name="course1Dept"
-                    value="ITIS"
-                    placeholder="Enter Department (e.g., ITIS)"
-                />
+                <div class="course-group" data-course-index="1">
+                    <label for="course1Dept">Department</label>
+                    <input 
+                        type="text"
+                        id="course1Dept"
+                        name="course1Dept"
+                        value="ITIS"
+                        placeholder="Enter Department (e.g., ITIS)"
+                    />
 
-                <label for="course1Num">Number</label>
-                <input 
-                    type="text"
-                    id="course1Num"
-                    name="course1Num"
-                    value="3135"
-                    placeholder="Enter Course Number"
-                />
+                    <label for="course1Num">Number</label>
+                    <input 
+                        type="text"
+                        id="course1Num"
+                        name="course1Num"
+                        value="3160"
+                        placeholder="Enter Course Number"
+                    />
 
-                <label for="course1Name">Name</label>
-                <input 
-                    type="text"
-                    id="course1Name"
-                    name="course1Name"
-                    value="Front-End Web App Development"
-                    placeholder="Enter Course Name"
-                />
+                    <label for="course1Name">Name</label>
+                    <input 
+                        type="text"
+                        id="course1Name"
+                        name="course1Name"
+                        value="Structure and Algorithms"
+                        placeholder="Enter Course Name"
+                    />
 
-                <label for="course1Reason">Reason</label>
-                <textarea 
-                    id="course1Reason"
-                    name="course1Reason"
-                    placeholder="Why are you taking this course?"
-                >I want to learn how to create websites</textarea>
+                    <label for="course1Reason">Reason</label>
+                    <textarea 
+                        id="course1Reason"
+                        name="course1Reason"
+                        placeholder="Why are you taking this course?"
+                    >Storing and manipulating data is an important part of software development.</textarea>
+                </div>
+
+                <div class="course-group" data-course-index="2">
+                    <label for="course2Dept">Department</label>
+                    <input 
+                        type="text"
+                        id="course2Dept"
+                        name="course2Dept"
+                        value=""
+                        placeholder="Enter Department (e.g., ITIS)"
+                    />
+
+                    <label for="course2Num">Number</label>
+                    <input 
+                        type="text"
+                        id="course2Num"
+                        name="course2Num"
+                        value=""
+                        placeholder="Enter Course Number"
+                    />
+
+                    <label for="course2Name">Name</label>
+                    <input 
+                        type="text"
+                        id="course2Name"
+                        name="course2Name"
+                        value="Public Speaking"
+                        placeholder="Enter Course Name"
+                    />
+
+                    <label for="course2Reason">Reason</label>
+                    <textarea 
+                        id="course2Reason"
+                        name="course2Reason"
+                        placeholder="Why are you taking this course?"
+                    >Communication is one of those that can be transferred to any field.</textarea>
+                </div>
+
+                <div class="course-group" data-course-index="3">
+                    <label for="course3Dept">Department</label>
+                    <input 
+                        type="text"
+                        id="course3Dept"
+                        name="course3Dept"
+                        value="ITIS"
+                        placeholder="Enter Department (e.g., ITIS)"
+                    />
+
+                    <label for="course3Num">Number</label>
+                    <input 
+                        type="text"
+                        id="course3Num"
+                        name="course3Num"
+                        value="3200"
+                        placeholder="Enter Course Number"
+                    />
+
+                    <label for="course3Name">Name</label>
+                    <input 
+                        type="text"
+                        id="course3Name"
+                        name="course3Name"
+                        value="Info Security & Privacy"
+                        placeholder="Enter Course Name"
+                    />
+
+                    <label for="course3Reason">Reason</label>
+                    <textarea 
+                        id="course3Reason"
+                        name="course3Reason"
+                        placeholder="Why are you taking this course?"
+                    >Before making any app, software, or website public it has to be secure and this class can help me understand that.</textarea>
+                </div>
+
+                <div class="course-group" data-course-index="4">
+                    <label for="course4Dept">Department</label>
+                    <input 
+                        type="text"
+                        id="course4Dept"
+                        name="course4Dept"
+                        value="ITSC"
+                        placeholder="Enter Department (e.g., ITIS)"
+                    />
+
+                    <label for="course4Num">Number</label>
+                    <input 
+                        type="text"
+                        id="course4Num"
+                        name="course4Num"
+                        value="2600"
+                        placeholder="Enter Course Number"
+                    />
+
+                    <label for="course4Name">Name</label>
+                    <input 
+                        type="text"
+                        id="course4Name"
+                        name="course4Name"
+                        value="Computing Professionals"
+                        placeholder="Enter Course Name"
+                    />
+
+                    <label for="course4Reason">Reason</label>
+                    <textarea 
+                        id="course4Reason"
+                        name="course4Reason"
+                        placeholder="Why are you taking this course?"
+                    >It was a required course for transfer students.</textarea>
+                </div>
             </fieldset>
 
             <fieldset>
@@ -279,6 +389,7 @@
             <button type="submit">Submit</button>
             <button type="reset">Reset</Button>
             <button type="button" id="clearButton">Clear</button>
+            <button type="button" id="jsonButton">Generate JSON</button>
             
             
         </form>
@@ -288,7 +399,9 @@
     <footer>
         <div data-include="components/footer.html"></div>
         <script src="scripts/htmlinclude.min.js"></script>
-         <script src="scripts/introduction.js"></script>
+        <script src="scripts/introduction.js"></script>
+        <script src="scripts/generate_json.js"></script>
+        
     </footer>
     
 </body>
