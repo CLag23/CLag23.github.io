@@ -65,10 +65,15 @@
     const courseGroups = form.querySelectorAll(".course-group");
     return Array.from(courseGroups)
       .map((group) => {
-        const dept = (group.querySelector("input[id$='Dept']")?.value || "").trim();
-        const number = (group.querySelector("input[id$='Num']")?.value || "").trim();
-        const name = (group.querySelector("input[id$='Name']")?.value || "").trim();
-        const reason = (group.querySelector("textarea[id$='Reason']")?.value || "").trim();
+        const deptEl = group.querySelector("input[id$='Dept']");
+        const numEl = group.querySelector("input[id$='Num']");
+        const nameEl = group.querySelector("input[id$='Name']");
+        const reasonEl = group.querySelector("textarea[id$='Reason']");
+
+        const dept = ((deptEl && deptEl.value) || "").trim();
+        const number = ((numEl && numEl.value) || "").trim();
+        const name = ((nameEl && nameEl.value) || "").trim();
+        const reason = ((reasonEl && reasonEl.value) || "").trim();
 
         if (!dept && !number && !name && !reason) {
           return null;
@@ -96,10 +101,10 @@
       .filter((link) => link !== null);
   }
 
-  function buildDecoratedName(firstName, middleName, lastName, divider, mascotAdj, mascotAnimal) {
-    const fullNameParts = [firstName, middleName, lastName].filter(Boolean);
-    const fullName = fullNameParts.join(" ").trim();
-    const decoratedParts = [];
+ function buildDecoratedName(firstName, middleName, lastName, divider, mascotAdj, mascotAnimal) {
+   const fullNameParts = [firstName, middleName, lastName].filter(Boolean);
+   const fullName = fullNameParts.join(" ").trim();
+   const decoratedParts = [];
 
     if (fullName) {
       decoratedParts.push(fullName);
@@ -114,10 +119,21 @@
       decoratedParts.push(mascotDisplay);
     }
 
-    return {
-      fullName,
-      decoratedName: decoratedParts.join(" ").trim()
-    };
+   return {
+     fullName,
+     decoratedName: decoratedParts.join(" ").trim()
+   };
+ }
+
+  function makeLabeledLi(label, value) {
+    if (!value) {
+      return "";
+    }
+    return [
+      "    <li>",
+      `        <strong>${label}:</strong> ${escapeHtmlText(value)}`,
+      "    </li>"
+    ].join("\n");
   }
 
   function buildCoursesMarkup(courses) {
@@ -233,43 +249,19 @@
     const listItems = [];
 
     if (personalBackground) {
-      listItems.push(
-        [
-          "    <li>",
-          `        <strong>Personal Background:</strong> ${escapeHtmlText(personalBackground)}`,
-          "    </li>"
-        ].join("\n")
-      );
+      listItems.push(makeLabeledLi("Personal Background", personalBackground));
     }
 
     if (professionalBackground) {
-      listItems.push(
-        [
-          "    <li>",
-          `        <strong>Professional Background:</strong> ${escapeHtmlText(professionalBackground)}`,
-          "    </li>"
-        ].join("\n")
-      );
+      listItems.push(makeLabeledLi("Professional Background", professionalBackground));
     }
 
     if (academicBackground) {
-      listItems.push(
-        [
-          "    <li>",
-          `        <strong>Academic Background:</strong> ${escapeHtmlText(academicBackground)}`,
-          "    </li>"
-        ].join("\n")
-      );
+      listItems.push(makeLabeledLi("Academic Background", academicBackground));
     }
 
     if (primaryComputer) {
-      listItems.push(
-        [
-          "    <li>",
-          `        <strong>Primary Computer:</strong> ${escapeHtmlText(primaryComputer)}`,
-          "    </li>"
-        ].join("\n")
-      );
+      listItems.push(makeLabeledLi("Primary Computer", primaryComputer));
     }
 
     const coursesMarkup = buildCoursesMarkup(courses);
@@ -339,10 +331,11 @@
       return;
     }
 
-    const mainHeading = form.closest("main")?.querySelector("h2") || null;
+    const mainEl = form.closest("main");
+    const mainHeading = mainEl ? mainEl.querySelector("h2") : null;
     const instructionsHeading =
       form.previousElementSibling instanceof HTMLElement ? form.previousElementSibling : null;
-    const originalHeadingText = mainHeading?.textContent?.trim() || DEFAULT_HEADING_TEXT;
+    const originalHeadingText = ((mainHeading && mainHeading.textContent ? mainHeading.textContent.trim() : "") || "") || DEFAULT_HEADING_TEXT;
 
     htmlButton.addEventListener("click", (event) => {
       event.preventDefault();

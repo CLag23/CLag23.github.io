@@ -44,10 +44,15 @@
     const courseGroups = form.querySelectorAll(".course-group");
     return Array.from(courseGroups)
       .map((group) => {
-        const dept = (group.querySelector("input[id$='Dept']")?.value || "").trim();
-        const number = (group.querySelector("input[id$='Num']")?.value || "").trim();
-        const name = (group.querySelector("input[id$='Name']")?.value || "").trim();
-        const reason = (group.querySelector("textarea[id$='Reason']")?.value || "").trim();
+        const deptEl = group.querySelector("input[id$='Dept']");
+        const numEl = group.querySelector("input[id$='Num']");
+        const nameEl = group.querySelector("input[id$='Name']");
+        const reasonEl = group.querySelector("textarea[id$='Reason']");
+
+        const dept = ((deptEl && deptEl.value) || "").trim();
+        const number = ((numEl && numEl.value) || "").trim();
+        const name = ((nameEl && nameEl.value) || "").trim();
+        const reason = ((reasonEl && reasonEl.value) || "").trim();
 
         if (!dept && !number && !name && !reason) {
           return null;
@@ -141,10 +146,11 @@
       return;
     }
 
-    const mainHeading = form.closest("main")?.querySelector("h2") || null;
+    const mainEl = form.closest("main");
+    const mainHeading = mainEl ? mainEl.querySelector("h2") : null;
     const instructionsHeading =
       form.previousElementSibling instanceof HTMLElement ? form.previousElementSibling : null;
-    const originalHeadingText = mainHeading?.textContent?.trim() || DEFAULT_HEADING_TEXT;
+    const originalHeadingText = (mainHeading && mainHeading.textContent ? mainHeading.textContent.trim() : "") || DEFAULT_HEADING_TEXT;
 
     jsonButton.addEventListener("click", (event) => {
       event.preventDefault();
