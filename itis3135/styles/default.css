@@ -15,6 +15,11 @@ header {
 }
 
 
+/* Right-align navigation links inside header */
+header nav {
+    text-align: right;
+}
+
 
 h1, h2 {
     font-family: Georgia, 'Times New Roman', serif;
@@ -180,7 +185,7 @@ form textarea {
     header nav {
         display: flex;
         flex-wrap: wrap;;
-        justify-content: center;
+        justify-content: flex-end;
         gap:0.5rem;
         
     }
