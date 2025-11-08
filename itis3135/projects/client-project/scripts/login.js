@@ -9,7 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
   try {
     const rememberedEmail = localStorage.getItem('pp_remember_email');
     if (rememberedEmail && email) email.value = rememberedEmail;
-  } catch {}
+  } catch (err) {
+    // ignore storage errors (e.g., privacy mode)
+  }
 
   const clearCustomValidity = () => {
     if (email) email.setCustomValidity('');
@@ -49,15 +51,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     try {
-      const wantsRemember = remember && (remember.checked ?? false);
+      const wantsRemember = !!(remember && remember.checked === true);
       if (wantsRemember && email) {
         localStorage.setItem('pp_remember_email', email.value.trim());
       } else {
         localStorage.removeItem('pp_remember_email');
       }
-    } catch {}
+    } catch (err) {
+      // ignore storage errors
+    }
 
     window.location.href = 'homePage.html';
   });
 });
-
