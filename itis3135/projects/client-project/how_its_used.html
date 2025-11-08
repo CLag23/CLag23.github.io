@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!-- How It’s Used | Author: CL | Purpose: Product/Service page with examples -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Pathway | How Is Python Used </title>
+    <link rel="stylesheet" href="./styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    
+    <main>
+        <h1>How Python Is Used</h1>
+        <figure>
+            <img src="./images/siteMap.png" alt="Examples of Python uses" style="max-width:100%;height:auto;">
+            <figcaption>Areas where Python is commonly applied</figcaption>
+        </figure>
+        <p>Python powers a wide range of real-world applications. Explore the sections below to see common areas where Python shines and why teams choose it for production systems and research.</p>
+
+        <h2>Explore Topics</h2>
+
+<h3>Web Development</h3>
+<p>How Python supports building backends, APIs, templated pages, authentication, and database access for modern websites and services.</p>
+
+<h3>Artificial Intelligence</h3>
+<p>How Python enables classical machine learning, deep learning, model training and evaluation, and experimentation workflows.</p>
+
+<h3>Data Science</h3>
+<p>How Python helps with data cleaning, transformation, exploratory analysis, statistics, and clear visualizations for decision-making.</p>
+
+        <h2>Quick Overviews</h2>
+
+        <details>
+            <summary>Web Development</summary>
+            <p>Python helps teams build APIs and full websites with clean, maintainable code. Frameworks provide URL routing, templating, database layers, security features, and testing utilities so developers can focus on product logic.</p>
+            <ul>
+                <li><strong>Backends and APIs</strong>: Serve JSON/REST or GraphQL endpoints for web and mobile apps.</li>
+                <li><strong>Templated sites</strong>: Render server-side HTML with reusable components.</li>
+                <li><strong>Auth &amp; security</strong>: Sessions, password hashing, CSRF protection, and permission systems built in.</li>
+                <li><strong>ORMs</strong>: Map database tables to Python objects for safer, faster data access.</li>
+            </ul>
+            <p>Common deliverables include dashboards, content platforms, ecommerce backends, and internal admin tools.</p>
+            <p><a href="how-used-web-development.html">Deep dive: Web Development</a></p>
+        </details>
+
+        <details>
+            <summary>Artificial Intelligence</summary>
+            <p>Python is the language of choice for many AI workflows, from classical machine learning to deep learning and modern generative models. Its concise syntax and rich libraries make experimentation fast and reproducible.</p>
+            <ul>
+                <li><strong>Classical ML</strong>: Classification, regression, clustering, and feature engineering.</li>
+                <li><strong>Deep Learning</strong>: Neural networks for vision, natural language, speech, and recommendation.</li>
+                <li><strong>Model ops</strong>: Training pipelines, evaluation, and deployment to services or edge devices.</li>
+                <li><strong>Experiment tracking</strong>: Reproducible runs with metrics, artifacts, and versioned data.</li>
+            </ul>
+            <p>Common deliverables include classifiers, recommender systems, chatbots, and content moderation tools.</p>
+            <p><a href="how-used-artificial-intelligence.html">Deep dive: Artificial Intelligence</a></p>
+        </details>
+
+        <details>
+            <summary>Data Science</summary>
+            <p>Python enables end-to-end data work: acquiring, cleaning, transforming, analyzing, and visualizing data to inform decisions. Notebook workflows combine prose, code, and charts for transparent, shareable analysis.</p>
+            <ul>
+                <li><strong>Data wrangling</strong>: Reshaping, joining, and aggregating datasets.</li>
+                <li><strong>Exploratory analysis</strong>: Statistics, visual summaries, and hypothesis testing.</li>
+                <li><strong>Visualization</strong>: Line, bar, scatter, heatmaps, and interactive dashboards.</li>
+                <li><strong>Production analytics</strong>: Scheduled jobs, reports, and alerting based on KPIs.</li>
+            </ul>
+            <p>Common deliverables include quarterly reports, forecasting models, anomaly detection, and BI dashboards.</p>
+            <p><a href="how-used-data-science.html">Deep dive: Data Science</a></p>
+        </details>
+
+        <h2>Typical Project Flow</h2>
+        <ol>
+            <li>Define goals and success metrics.</li>
+            <li>Design the data model or choose datasets.</li>
+            <li>Implement the core logic (web routes, models, or algorithms).</li>
+            <li>Validate with tests and small pilots.</li>
+            <li>Deploy, monitor, and iterate based on feedback.</li>
+        </ol>
+
+        <h2>Small Code Glimpses</h2>
+        <p>These tiny snippets hint at the kinds of tasks done in each area.</p>
+
+        <h3>Web: A Minimal Route</h3>
+        <pre><code>from http.server import BaseHTTPRequestHandler, HTTPServer
+
+class App(BaseHTTPRequestHandler):
+    def do_GET(self):
+        if self.path == "/health":
+            self.send_response(200)
+            self.end_headers()
+            self.wfile.write(b"OK")
+
+HTTPServer(("", 8000), App).serve_forever()</code></pre>
+
+        <h3>AI: Simple Inference Pattern</h3>
+        <pre><code>def predict(features, weights, bias):
+    score = sum(f * w for f, w in zip(features, weights)) + bias
+    return 1 if score &gt; 0 else 0
+
+print(predict([0.2, -0.1, 0.7], [2.0, 1.0, -1.5], 0.1))</code></pre>
+
+        <h3>Data: Quick Summary</h3>
+        <pre><code>numbers = [12, 18, 25, 18, 42]
+mean = sum(numbers) / len(numbers)
+unique = set(numbers)
+print(mean, unique)</code></pre>
+
+        <h2>Where to Go Next</h2>
+        <ul>
+            <li>Pick a topic above and explore.</li>
+            <li>Choose a small project idea (a tiny API, a basic classifier, or a simple data report).</li>
+            <li>Iterate: add tests, improve structure, and document what you learn.</li>
+        </ul>
+    </main>
+
+    <footer class="site-footer">
+        <div data-include="components/footer.html"></div>
+        <script src="scripts/htmlinclude.min.js"></script>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!-- Set Up | Author: CL | Purpose: Product/Service page with setup guidance -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Pathway | Set Up Environment</title>
+    <link rel="stylesheet" href="./styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    
+    <main>
+        <h1>Beginner Setup Guide</h1>
+        <figure>
+            <img src="./images/siteMap.png" alt="Python setup overview" style="max-width:100%;height:auto;">
+            <figcaption>High-level overview of setup steps</figcaption>
+        </figure>
+        <p>This page guides you through installing Python, choosing a code editor, and trying online environments. It is read-only, requires no input, and links to reputable external resources for deeper tutorials.</p>
+
+        <h2>Install Python</h2>
+        <p>Modern tutorials assume Python 3. Visit the official site to get the latest stable release and instructions for your operating system.</p>
+        <ul>
+            <li><a href="https://www.python.org/downloads/" target="_blank" rel="noopener">Official Python Downloads (python.org)</a></li>
+            <li><a href="https://docs.python.org/3/using/index.html" target="_blank" rel="noopener">Using Python — Platform Guides</a></li>
+        </ul>
+
+        <h3>Quick Verification</h3>
+        <p>After installation, open your terminal and check the version:</p>
+        <pre><code>python --version
+python3 --version</code></pre>
+        <p>Either command should print a version number (for example, <em>Python 3.12.x</em>).</p>
+
+        <h3>Package Installer (pip)</h3>
+        <pre><code>python -m pip --version
+python3 -m pip --version</code></pre>
+        <p>If a version appears, <em>pip</em> is available. See the official docs if you need help:</p>
+        <ul>
+            <li><a href="https://pip.pypa.io/en/stable/installation/" target="_blank" rel="noopener">pip Installation</a></li>
+            <li><a href="https://packaging.python.org/en/latest/tutorials/installing-packages/" target="_blank" rel="noopener">Installing Packages Tutorial</a></li>
+        </ul>
+
+        <h2>Choose a Code Editor</h2>
+        <p>You can start with a lightweight editor or a full IDE. The links below include official docs and beginner tutorials.</p>
+        <ul>
+            <li><strong>Visual Studio Code</strong> — free, popular editor with Python extension:
+                <ul>
+                    <li><a href="https://code.visualstudio.com/" target="_blank" rel="noopener">Download VS Code</a></li>
+                    <li><a href="https://code.visualstudio.com/docs/languages/python" target="_blank" rel="noopener">VS Code + Python Guide</a></li>
+                </ul>
+            </li>
+            <li><strong>PyCharm Community</strong> — Python-focused IDE (free edition):
+                <ul>
+                    <li><a href="https://www.jetbrains.com/pycharm/download/" target="_blank" rel="noopener">Download PyCharm</a></li>
+                    <li><a href="https://www.jetbrains.com/help/pycharm/quick-start-guide.html" target="_blank" rel="noopener">PyCharm Quick Start</a></li>
+                </ul>
+            </li>
+            <li><strong>Thonny</strong> — beginner-friendly IDE:
+                <ul>
+                    <li><a href="https://thonny.org/" target="_blank" rel="noopener">Download Thonny</a></li>
+                </ul>
+            </li>
+            <li><strong>IDLE</strong> — included with many Python installs:
+                <ul>
+                    <li><a href="https://docs.python.org/3/library/idle.html" target="_blank" rel="noopener">IDLE Documentation</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Online Environments (No Install)</h2>
+        <p>Use these options to experiment with Python in your browser. They are great for quick practice or when you cannot install software locally.</p>
+        <ul>
+            <li><strong>Python Tutor</strong> — step-through visualizer for understanding code:
+                <ul>
+                    <li><a href="https://pythontutor.com/python-compiler.html" target="_blank" rel="noopener">Run Python in Browser</a></li>
+                    <li><a href="https://pythontutor.com/" target="_blank" rel="noopener">Python Tutor Home</a></li>
+                </ul>
+            </li>
+            <li><strong>Replit</strong> — online editor with instant run and sharing:
+                <ul>
+                    <li><a href="https://replit.com/languages/python3" target="_blank" rel="noopener">Start a Python Repl</a></li>
+                    <li><a href="https://docs.replit.com" target="_blank" rel="noopener">Replit Docs</a></li>
+                </ul>
+            </li>
+            <li><strong>Google Colab</strong> — notebook environment (great for code cells and notes):
+                <ul>
+                    <li><a href="https://colab.research.google.com/" target="_blank" rel="noopener">Open Google Colab</a></li>
+                    <li><a href="https://research.google.com/colaboratory/faq.html" target="_blank" rel="noopener">Colab FAQ</a></li>
+                </ul>
+            </li>
+            <li><strong>JupyterLite</strong> — Jupyter notebooks that run fully in your browser:
+                <ul>
+                    <li><a href="https://jupyterlite.readthedocs.io/en/latest/" target="_blank" rel="noopener">JupyterLite Docs</a></li>
+                    <li><a href="https://jupyter.org/try-jupyter/lab/" target="_blank" rel="noopener">Try Jupyter in the Browser</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Optional: Isolated Project Environments</h2>
+        <p>Virtual environments help keep project dependencies separate. They are optional for beginners but recommended as you start new projects.</p>
+        <ol>
+            <li>Create a folder and a virtual environment:
+                <pre><code>mkdir my_project
+cd my_project
+python -m venv .venv</code></pre>
+            </li>
+            <li>Activate it:
+                <pre><code># Windows
+.venv\Scripts\activate
+
+# macOS / Linux
+source .venv/bin/activate</code></pre>
+            </li>
+            <li>Install a package and list what you have:
+                <pre><code>python -m pip install requests
+python -m pip list</code></pre>
+            </li>
+            <li>Deactivate when done:
+                <pre><code>deactivate</code></pre>
+            </li>
+        </ol>
+        <p>More details: <a href="https://docs.python.org/3/tutorial/venv.html" target="_blank" rel="noopener">Virtual Environments and Packages (docs.python.org)</a></p>
+
+        <h2>Beginner Tutorials</h2>
+        <ul>
+            <li><a href="https://docs.python.org/3/tutorial/" target="_blank" rel="noopener">Official Python Tutorial</a></li>
+            <li><a href="https://realpython.com/start-here/" target="_blank" rel="noopener">Real Python: Start Here</a></li>
+            <li><a href="https://automatetheboringstuff.com/" target="_blank" rel="noopener">Automate the Boring Stuff with Python (free to read online)</a></li>
+            <li><a href="https://www.freecodecamp.org/news/tag/python/" target="_blank" rel="noopener">freeCodeCamp Python Articles</a></li>
+        </ul>
+
+        <h2>Sanity Check</h2>
+        <p>Wherever you choose to code, run this single line to confirm things work:</p>
+        <pre><code>print("Hello, Python!")</code></pre>
+
+        <h2>Summary</h2>
+        <p>Install Python, select an editor that feels comfortable, or begin immediately in a browser-based environment. Use the links above to learn step-by-step, and return to this page whenever you need quick references.</p>
+        
+    </main>
+
+    <footer class="site-footer">
+        <div data-include="components/footer.html"></div>
+        <script src="scripts/htmlinclude.min.js"></script>
+    </footer>
+    
+</body>
+</html>

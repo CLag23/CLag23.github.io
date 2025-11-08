@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!-- What Is Python | Author: CL | Purpose: Product/Service page describing Python -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Pathway | What is Python</title>
+    <link rel="stylesheet" href="./styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    
+    <main>
+        <h1>What is Python?</h1>
+        <figure>
+            <img src="./images/siteMap.png" alt="Python overview illustration" style="max-width:100%;height:auto;">
+            <figcaption>A simple overview image</figcaption>
+        </figure>
+        <p>Python is a high-level, interpreted programming language designed to be readable and expressive. It was created by Guido van Rossum and first released in 1991. The language emphasizes clarity and simplicity, encouraging code that is easy to understand and maintain.</p>
+
+        <h2>Design Philosophy</h2>
+        <p>Python follows a “readability first” philosophy: clear names, minimal punctuation, and meaningful whitespace. Indentation is part of the syntax, so the structure of a program is visible at a glance. Many of these ideas are captured in the “Zen of Python,” which values simplicity, explicitness, and practicality.</p>
+
+        <h2>How Python Runs</h2>
+        <p>Python source code is translated to bytecode and executed by a virtual machine. This avoids a separate compile step typical of fully compiled languages. The result is quick iteration and straightforward debugging.</p>
+
+        <h2>Typing and Variables</h2>
+        <ul>
+            <li><strong>Dynamically typed</strong>: The type of a variable is determined at runtime.</li>
+            <li><strong>Strongly typed</strong>: Operations that mix incompatible types cause errors rather than silent conversions.</li>
+            <li><strong>Optional type hints</strong>: You can add annotations to improve clarity and tooling, without changing runtime behavior.</li>
+        </ul>
+
+        <h2>Core Syntax Features</h2>
+        <ul>
+            <li><strong>Indentation</strong> defines blocks instead of braces.</li>
+            <li><strong>Colons</strong> introduce blocks (after <code>if</code>, <code>for</code>, <code>def</code>, etc.).</li>
+            <li><strong>Whitespace</strong> is significant and encourages consistent formatting.</li>
+        </ul>
+
+        <h2>Basic Example</h2>
+        <pre><code>print("Hello, Python!")</code></pre>
+
+        <h2>Data Types at a Glance</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Examples</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Numbers</td>
+                    <td><code>int</code>, <code>float</code>, <code>complex</code></td>
+                    <td>Arithmetic, comparisons, and math helpers available.</td>
+                </tr>
+                <tr>
+                    <td>Text</td>
+                    <td><code>str</code></td>
+                    <td>Immutable; supports slicing and methods like <code>.lower()</code>.</td>
+                </tr>
+                <tr>
+                    <td>Sequences</td>
+                    <td><code>list</code>, <code>tuple</code>, <code>range</code></td>
+                    <td>Lists are mutable; tuples are immutable.</td>
+                </tr>
+                <tr>
+                    <td>Sets</td>
+                    <td><code>set</code>, <code>frozenset</code></td>
+                    <td>Unique elements; fast membership tests.</td>
+                </tr>
+                <tr>
+                    <td>Mappings</td>
+                    <td><code>dict</code></td>
+                    <td>Key–value pairs with flexible keys.</td>
+                </tr>
+                <tr>
+                    <td>Booleans</td>
+                    <td><code>True</code>, <code>False</code></td>
+                    <td>Results of comparisons and logical operations.</td>
+                </tr>
+                <tr>
+                    <td>Nothing</td>
+                    <td><code>None</code></td>
+                    <td>Represents the absence of a value.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Functions</h2>
+        <pre><code>def greet(name: str) -> str:
+    return f"Hello, {name}!"
+
+print(greet("Ada"))</code></pre>
+
+        <h2>Exceptions</h2>
+        <pre><code>try:
+    result = 10 / 0
+except ZeroDivisionError:
+    result = None
+finally:
+    print("Done.")
+print(result)</code></pre>
+
+        <h2>Modules and Imports</h2>
+        <p>Python code is organized into modules (single files) and packages (directories with modules). Imports let you access definitions from other modules, encouraging reuse and clear structure.</p>
+        <pre><code>import math
+print(math.sqrt(16))</code></pre>
+
+        <h2>Object-Oriented and Beyond</h2>
+        <p>Python supports multiple paradigms: procedural, object-oriented, and functional. You can define classes and create objects, or write concise functions and pure transformations.</p>
+        <pre><code>class Counter:
+    def __init__(self, start: int = 0):
+        self.value = start
+
+    def increment(self) -> None:
+        self.value += 1
+
+c = Counter()
+c.increment()
+print(c.value)</code></pre>
+
+        <h2>Style and Conventions</h2>
+        <ul>
+            <li><strong>PEP 8</strong>: A style guide that recommends naming patterns, line lengths, and formatting.</li>
+            <li><strong>Docstrings</strong>: Triple-quoted strings that document modules, classes, and functions.</li>
+            <li><strong>Readability</strong>: Prefer explicit code and meaningful names.</li>
+        </ul>
+
+        <h2>Versions and Governance</h2>
+        <ul>
+            <li>Modern Python commonly refers to the Python 3 series, which introduced improvements over Python 2.</li>
+            <li>The language evolves through proposals called PEPs (Python Enhancement Proposals).</li>
+            <li>The Python Software Foundation (PSF) is a non-profit that manages intellectual property and supports the community.</li>
+        </ul>
+
+        <h2>Summary</h2>
+        <p>Python is a readable, expressive language with clear syntax, significant indentation, and strong yet dynamic typing. Its module system encourages organized programs, while its conventions and philosophy guide developers toward clean, maintainable code.</p>
+        
+    </main>
+
+    <footer class="site-footer">
+        <div data-include="components/footer.html"></div>
+        <script src="scripts/htmlinclude.min.js"></script>
+    </footer>
+    
+</body>
+</html>

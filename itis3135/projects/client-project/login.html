@@ -1,120 +1,119 @@
 <!DOCTYPE html>
+<!-- Login | Author: CL | Purpose: Centered card sign-in -->
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login | Python Pathway</title>
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    <script src="scripts/login.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Python Pathway</title>
+  <link rel="stylesheet" href="./styles/default.css">
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <script src="scripts/login.js" defer></script>
 
-    <style>
-		
-		body {
-			font-family: Arial, sans-serif;
-			background: #f4f6fb;
-			height: 100vh;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-        main {
-			background: #fff;
-			max-width: 480px;
-			padding: 5rem;
-			border-radius: 10px;
-			box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-		}
-		h1 {
-			text-align: center;
-			margin-bottom: .4rem;
-			color: #111;
-		}
-		p {
-			text-align: center;
-			color: #666;
-			font-size: .85rem;
-			margin-bottom: 1.2rem;
-		}
-		label {
-			display: block;
-			margin-bottom: .3rem;
-			font-size: .8rem;
-			color: #333;
-		}
-		input {
-			max-width: 100%;
-			padding: .5rem;
-			border: 1px solid #ddd;
-			border-radius: 5px;
-			margin-bottom: 1rem;
-		}
-		input:focus { 
-			border-color: #2563eb; outline: none; 
-		}
-		.row {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			font-size: .8rem;
-			margin-bottom: 1rem;
-		}
-		button {
-			max-width: 100%;
-			background: #2563eb;
-			color: #fff;
-			border: none;
-			padding: .6rem;
-			border-radius: 5px;
-			cursor: pointer;
-			font-weight: bold;
-		}
-		button:hover { 
-			background: #1d4ed8; 
-		}
-		a {
-			color: #2563eb;
-			text-decoration: none;
-		}
-		a:hover { 
-			text-decoration: underline; 
-		}
-		.small {
-			text-align: center;
-			font-size: .8rem;
-			color: #555;
-			margin-top: 1rem;
-		}
+  <style>
+    /* Page grid: header | centered main | footer */
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6fb;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
 
-	</style>
+    /* Center the card within the main area */
+    main {
+      display: grid;
+      place-items: center;
+      padding: 2rem;
+    }
 
+    .card {
+      background: #fff;
+      width: min(480px, 92vw);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
 
+    h1 {
+      text-align: center;
+      margin-bottom: .4rem;
+      color: #111;
+    }
+    p {
+      text-align: center;
+      color: #666;
+      font-size: .9rem;
+      margin-bottom: 1.2rem;
+    }
+    label {
+      display: block;
+      margin-bottom: .3rem;
+      font-size: .85rem;
+      color: #333;
+    }
+    input {
+      width: 100%;
+      padding: .55rem;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+    }
+    input:focus { border-color: #2563eb; outline: none; }
+    .row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: .85rem;
+      margin-bottom: 1rem;
+      gap: .75rem;
+    }
+    button {
+      width: 100%;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      padding: .7rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 700;
+    }
+    button:hover { background: #1d4ed8; }
+    a { color: #2563eb; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .small { text-align: center; font-size: .85rem; color: #555; margin-top: 1rem; }
+  </style>
 </head>
 <body>
-    <header>
+  <header>
+    <!-- Include shared header for consistent navigation -->
+    <div data-include="components/header.html"></div>
+  </header>
 
-    </header>
+  <main>
+    <section class="card" aria-label="Sign in">
+      <h1>Sign In</h1>
+      <p>Access your Python Pathway account</p>
+      <form action="#" method="post" novalidate>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" required>
+        <div class="row">
+          <label><input type="checkbox"> Remember me</label>
+          <a href="#">Forgot password?</a>
+        </div>
+        <button type="submit">Sign In</button>
+        <p class="small">Don’t have an account? <a href="#">Create one</a></p>
+      </form>
+    </section>
+  </main>
 
-    <main>
-        <h1>Sign In</h1>
-       
-        <form action="#" method="post" novalidate>
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" autocomplete="email" required>
-            <label for="password">Password</label>
-            <input id="password" name="password" type="password" autocomplete="current-password" required>
-            <div class="row">
-                <label><input type="checkbox"> Remember me</label>
-                <a href="#">Forgot password?</a>
-			</div>
-            <button type="submit">Sign In</button>
-            <p class="small">Don’t have an account? <a href="#">Create one</a></p>
-        </form>
-    </main>
-
-    <footer>
-
-        <script src="scripts/htmlinclude.min.js"></script>
-
-    </footer>
+  <footer class="site-footer">
+    <!-- Include shared footer -->
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/htmlinclude.min.js"></script>
+  </footer>
 </body>
 </html>
+
