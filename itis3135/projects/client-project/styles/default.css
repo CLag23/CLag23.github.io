@@ -1,4 +1,4 @@
-/* Default styles for client-project | Author: CL | Purpose: Consistent look and feel */
+
 * {
     margin: 0;
     padding: 0;
@@ -61,7 +61,6 @@ main {
   flex: 1;
   padding: 2rem 
 }
-
 
 
 h2 {

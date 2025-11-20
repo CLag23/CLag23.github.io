@@ -15,10 +15,25 @@ header {
 }
 
 
-/* Right-align navigation links inside header */
-header nav {
-    text-align: right;
+
+header nav,
+header .sub-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    margin: 12px 0;
+    padding: 0;
+
 }
+
+/* Add divider above sub-nav */
+header .sub-nav {
+    padding-top: 15px;
+    border-top: 2px solid #b08b4f;
+    margin-top: 20px;
+}
+
 
 
 h1, h2 {
@@ -41,7 +56,7 @@ main p, h3{
 header a, footer a {
     color: #ffffff;
     background: #b08b4f;
-    padding: 0.3rem 0.8rem;
+    padding: 0.2rem 0.4rem;
     border-radius: 6px;
     border: 1px solid #b08b4f;
     transition:  0.2s, color 0.2s;
@@ -93,9 +108,6 @@ footer p:last-of-type a:hover {
     border: none;
     box-shadow: none; 
 }       
-.sub-nav {
-    margin-top: 10px;
-}
 
 table {
     border-collapse: collapse; 
@@ -151,7 +163,7 @@ label {
     text-align: left;
 }
 
-/* Inputs and textareas: full-width, one per line */
+
 
 form input {
     display: block;
@@ -159,7 +171,7 @@ form input {
     
 }
 
-/* Textareas take almost whole width and have comfortable height */
+
 form textarea {
     min-height: 50px;
     resize: vertical;
@@ -182,12 +194,10 @@ form textarea {
         width: 300px;
     }
 
-    header nav {
-        display: flex;
-        flex-wrap: wrap;;
-        justify-content: flex-end;
-        gap:0.5rem;
-        
+    header nav,
+    header .sub-nav {
+        justify-content: center;
+        gap: 0.5rem;
     }
 
     main, header, footer{
