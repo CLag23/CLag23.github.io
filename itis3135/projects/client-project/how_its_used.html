@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<!-- How It’s Used | Author: CL | Purpose: Product/Service page with examples -->
+﻿<!DOCTYPE html>
+<!-- How It's Used | Author: CL | Purpose: Product/Service page with examples -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Python Pathway | How Is Python Used </title>
+    <title>Python Pathway | How Is Python Used</title>
     <link rel="stylesheet" href="./styles/default.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
@@ -12,116 +12,234 @@
     <header>
         <div data-include="components/header.html"></div>
     </header>
-    
-    <main>
-        <h1>How Python Is Used</h1>
-        <figure>
-            <img src="./images/ways.png" alt="Examples of Python uses" style="max-width:10%;height:auto;">
-            <figcaption>Areas where Python is commonly applied</figcaption>
-        </figure>
-        <p>Python powers a wide range of real-world applications. Explore the sections below to see common areas where Python shines and why teams choose it for production systems and research.</p>
 
-        <h2>Explore Topics</h2>
+    <main class="usage-page">
+        <section class="usage-hero">
+            <p class="eyebrow">Practical Python</p>
+            <h1>How Python Is Used</h1>
+            <p class="lede">Python powers APIs, automates workflows, trains machine learning models, and turns raw data into decisions. Pick a track below to see where it shines and what teams ship with it.</p>
+            <div class="pill-row">
+                <span class="pill">Reliable backends</span>
+                <span class="pill">Production-ready AI</span>
+                <span class="pill">Data you can trust</span>
+            </div>
+        </section>
 
-<h3>Web Development</h3>
-<p>How Python supports building backends, APIs, templated pages, authentication, and database access for modern websites and services.</p>
+        <section class="usage-tabs">
+            <div class="pill-tabs" role="tablist" aria-label="Python use cases">
+                <button class="pill-tab active" data-target="web-panel" aria-controls="web-panel" aria-selected="true" role="tab">Web Development</button>
+                <button class="pill-tab" data-target="ai-panel" aria-controls="ai-panel" aria-selected="false" role="tab">Artificial Intelligence</button>
+                <button class="pill-tab" data-target="data-panel" aria-controls="data-panel" aria-selected="false" role="tab">Data Science</button>
+            </div>
 
-<h3>Artificial Intelligence</h3>
-<p>How Python enables classical machine learning, deep learning, model training and evaluation, and experimentation workflows.</p>
+            <article class="usage-card show" id="web-panel" role="tabpanel">
+                <div class="card-head">
+                    <span class="icon" aria-hidden="true">&#127760;</span>
+                    <div>
+                        <h2>Web Development with Python</h2>
+                        <p class="card-subtitle">Ship APIs, dashboards, and full-stack experiences.</p>
+                    </div>
+                </div>
+                <p>Frameworks like Django, FastAPI, and Flask make it fast to build secure, maintainable services. You get URL routing, templating, ORM layers, and auth out of the box.</p>
+                <ul class="usage-list">
+                    <li><span>REST + GraphQL APIs:</span> Power mobile apps and single-page apps with predictable endpoints.</li>
+                    <li><span>Full-stack sites:</span> Render server-side pages with reusable components and form handling.</li>
+                    <li><span>Security built-in:</span> Sessions, password hashing, CSRF protection, and permission checks.</li>
+                    <li><span>Database integration:</span> Query PostgreSQL, MySQL, or SQLite cleanly with ORMs.</li>
+                    <li><span>Real-time features:</span> Add websockets for live updates, chat, and notifications.</li>
+                </ul>
+                <p class="meta"><strong>Popular frameworks:</strong> Django, Flask, FastAPI, Pyramid</p>
+                <p class="meta"><strong>Real-world examples:</strong> Instagram, Spotify, Pinterest, Dropbox</p>
+            </article>
 
-<h3>Data Science</h3>
-<p>How Python helps with data cleaning, transformation, exploratory analysis, statistics, and clear visualizations for decision-making.</p>
+            <article class="usage-card" id="ai-panel" role="tabpanel" aria-hidden="true">
+                <div class="card-head">
+                    <span class="icon" aria-hidden="true">&#129302;</span>
+                    <div>
+                        <h2>Artificial Intelligence with Python</h2>
+                        <p class="card-subtitle">Go from prototype models to production AI.</p>
+                    </div>
+                </div>
+                <p>Python's ML ecosystem makes experimentation and deployment straightforward. From simple classifiers to deep learning, you can move quickly with strong tooling.</p>
+                <ul class="usage-list">
+                    <li><span>Machine learning:</span> Build predictive models for classification, regression, and clustering.</li>
+                    <li><span>Deep learning:</span> Train neural networks for vision, language, and recommendation systems.</li>
+                    <li><span>Computer vision:</span> Detect objects, track motion, and analyze images or video.</li>
+                    <li><span>Natural language:</span> Sentiment analysis, chatbots, translation, and summarization.</li>
+                    <li><span>Model deployment:</span> Serve models via APIs, queues, or edge devices with monitoring.</li>
+                </ul>
+                <p class="meta"><strong>Popular libraries:</strong> TensorFlow, PyTorch, scikit-learn, Keras, OpenCV</p>
+                <p class="meta"><strong>Real-world examples:</strong> Recommendation engines, autopilot systems, voice assistants</p>
+            </article>
 
-        <h2>Quick Overviews</h2>
+            <article class="usage-card" id="data-panel" role="tabpanel" aria-hidden="true">
+                <div class="card-head">
+                    <span class="icon" aria-hidden="true">&#128202;</span>
+                    <div>
+                        <h2>Data Science with Python</h2>
+                        <p class="card-subtitle">Clean data, explore trends, and build decision-ready visuals.</p>
+                    </div>
+                </div>
+                <p>Python is the go-to for exploratory analysis and production analytics. Notebooks make it easy to pair narrative with code, charts, and reproducible results.</p>
+                <ul class="usage-list">
+                    <li><span>Data cleaning:</span> Handle missing values, deduplicate, and reshape messy datasets.</li>
+                    <li><span>Statistical analysis:</span> Run hypothesis tests, correlations, and forecasting.</li>
+                    <li><span>Data visualization:</span> Build interactive dashboards and publication-ready charts.</li>
+                    <li><span>Big data:</span> Use parallel processing to crunch large datasets efficiently.</li>
+                    <li><span>Business intelligence:</span> Automate reports and alerts for KPIs.</li>
+                </ul>
+                <p class="meta"><strong>Popular libraries:</strong> Pandas, NumPy, Matplotlib, Seaborn, Plotly</p>
+                <p class="meta"><strong>Real-world examples:</strong> NASA telemetry, finance risk models, logistics forecasting</p>
+            </article>
+        </section>
 
-        <details>
-            <summary>Web Development</summary>
-            <p>Python helps teams build APIs and full websites with clean, maintainable code. Frameworks provide URL routing, templating, database layers, security features, and testing utilities so developers can focus on product logic.</p>
-            <ul>
-                <li><strong>Backends and APIs</strong>: Serve JSON/REST or GraphQL endpoints for web and mobile apps.</li>
-                <li><strong>Templated sites</strong>: Render server-side HTML with reusable components.</li>
-                <li><strong>Auth &amp; security</strong>: Sessions, password hashing, CSRF protection, and permission systems built in.</li>
-                <li><strong>ORMs</strong>: Map database tables to Python objects for safer, faster data access.</li>
-            </ul>
-            <p>Common deliverables include dashboards, content platforms, ecommerce backends, and internal admin tools.</p>
-            <p><a href="how-used-web-development.html">Deep dive: Web Development</a></p>
-        </details>
+        <section class="usage-code">
+            <div class="card-head">
+                <span class="icon" aria-hidden="true">&#128187;</span>
+                <div>
+                    <p class="eyebrow">See Python in action</p>
+                    <h2>Mini examples</h2>
+                </div>
+            </div>
+            <p class="lede">Flip through quick snippets to see how Python moves from a blank file to something shippable.</p>
 
-        <details>
-            <summary>Artificial Intelligence</summary>
-            <p>Python is the language of choice for many AI workflows, from classical machine learning to deep learning and modern generative models. Its concise syntax and rich libraries make experimentation fast and reproducible.</p>
-            <ul>
-                <li><strong>Classical ML</strong>: Classification, regression, clustering, and feature engineering.</li>
-                <li><strong>Deep Learning</strong>: Neural networks for vision, natural language, speech, and recommendation.</li>
-                <li><strong>Model ops</strong>: Training pipelines, evaluation, and deployment to services or edge devices.</li>
-                <li><strong>Experiment tracking</strong>: Reproducible runs with metrics, artifacts, and versioned data.</li>
-            </ul>
-            <p>Common deliverables include classifiers, recommender systems, chatbots, and content moderation tools.</p>
-            <p><a href="how-used-artificial-intelligence.html">Deep dive: Artificial Intelligence</a></p>
-        </details>
+            <div class="code-carousel">
+                <article class="code-slide show" data-index="0">
+                    <h3>Web: Simple API Endpoint</h3>
+                    <p class="code-caption">A tiny Flask route that returns JSON.</p>
+<pre><code>from flask import Flask, jsonify
 
-        <details>
-            <summary>Data Science</summary>
-            <p>Python enables end-to-end data work: acquiring, cleaning, transforming, analyzing, and visualizing data to inform decisions. Notebook workflows combine prose, code, and charts for transparent, shareable analysis.</p>
-            <ul>
-                <li><strong>Data wrangling</strong>: Reshaping, joining, and aggregating datasets.</li>
-                <li><strong>Exploratory analysis</strong>: Statistics, visual summaries, and hypothesis testing.</li>
-                <li><strong>Visualization</strong>: Line, bar, scatter, heatmaps, and interactive dashboards.</li>
-                <li><strong>Production analytics</strong>: Scheduled jobs, reports, and alerting based on KPIs.</li>
-            </ul>
-            <p>Common deliverables include quarterly reports, forecasting models, anomaly detection, and BI dashboards.</p>
-            <p><a href="how-used-data-science.html">Deep dive: Data Science</a></p>
-        </details>
+app = Flask(__name__)
 
-        <h2>Typical Project Flow</h2>
-        <ol>
-            <li>Define goals and success metrics.</li>
-            <li>Design the data model or choose datasets.</li>
-            <li>Implement the core logic (web routes, models, or algorithms).</li>
-            <li>Validate with tests and small pilots.</li>
-            <li>Deploy, monitor, and iterate based on feedback.</li>
-        </ol>
+@app.route("/api/users")
+def get_users():
+    users = [
+        {"id": 1, "name": "Alice"},
+        {"id": 2, "name": "Bob"},
+    ]
+    return jsonify(users)
 
-        <h2>Small Code Glimpses</h2>
-        <p>These tiny snippets hint at the kinds of tasks done in each area.</p>
+if __name__ == "__main__":
+    app.run(debug=True)</code></pre>
+                </article>
 
-        <h3>Web: A Minimal Route</h3>
-        <pre><code>from http.server import BaseHTTPRequestHandler, HTTPServer
+                <article class="code-slide" data-index="1" aria-hidden="true">
+                    <h3>AI: Quick Image Classification</h3>
+                    <p class="code-caption">Load a pre-trained MobileNet model to label an image.</p>
+<pre><code>from tensorflow.keras.applications import MobileNetV2
+from tensorflow.keras.preprocessing import image
+import numpy as np
 
-class App(BaseHTTPRequestHandler):
-    def do_GET(self):
-        if self.path == "/health":
-            self.send_response(200)
-            self.end_headers()
-            self.wfile.write(b"OK")
+model = MobileNetV2(weights="imagenet")
 
-HTTPServer(("", 8000), App).serve_forever()</code></pre>
+img = image.load_img("cat.jpg", target_size=(224, 224))
+x = image.img_to_array(img)
+x = np.expand_dims(x, axis=0)
 
-        <h3>AI: Simple Inference Pattern</h3>
-        <pre><code>def predict(features, weights, bias):
-    score = sum(f * w for f, w in zip(features, weights)) + bias
-    return 1 if score &gt; 0 else 0
+predictions = model.predict(x)
+print(predictions[0][:3])</code></pre>
+                </article>
 
-print(predict([0.2, -0.1, 0.7], [2.0, 1.0, -1.5], 0.1))</code></pre>
+                <article class="code-slide" data-index="2" aria-hidden="true">
+                    <h3>Data: Fast Data Summary</h3>
+                    <p class="code-caption">Use pandas to summarize and visualize sales by category.</p>
+<pre><code>import pandas as pd
+import matplotlib.pyplot as plt
 
-        <h3>Data: Quick Summary</h3>
-        <pre><code>numbers = [12, 18, 25, 18, 42]
-mean = sum(numbers) / len(numbers)
-unique = set(numbers)
-print(mean, unique)</code></pre>
+df = pd.read_csv("sales.csv")
 
-        <h2>Where to Go Next</h2>
-        <ul>
-            <li>Pick a topic above and explore.</li>
-            <li>Choose a small project idea (a tiny API, a basic classifier, or a simple data report).</li>
-            <li>Iterate: add tests, improve structure, and document what you learn.</li>
-        </ul>
+print(df.describe())
+
+category_totals = df.groupby("category")["sales"].sum()
+category_totals.plot(kind="bar", color="#0ea5b7")
+plt.title("Sales by Category")
+plt.tight_layout()
+plt.show()</code></pre>
+                </article>
+
+                <div class="code-nav">
+                    <button class="ghost" data-dir="prev">&larr; Previous</button>
+                    <div class="dots" role="tablist" aria-label="Example slides">
+                        <button class="dot active" data-index="0"><span class="sr-only">Web example</span></button>
+                        <button class="dot" data-index="1"><span class="sr-only">AI example</span></button>
+                        <button class="dot" data-index="2"><span class="sr-only">Data example</span></button>
+                    </div>
+                    <button class="ghost" data-dir="next">Next &rarr;</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="next-steps">
+            <div class="next-card">
+                <h3>Try a tiny build</h3>
+                <p>Create a single API route, a quick model, or a chart. Keep it deployable and small.</p>
+            </div>
+            <div class="next-card">
+                <h3>Layer in tests</h3>
+                <p>Write one or two happy-path tests so changes stay safe as you add features.</p>
+            </div>
+            <div class="next-card">
+                <h3>Share what you learn</h3>
+                <p>Capture takeaways in README notes or a short post for teammates.</p>
+            </div>
+        </section>
     </main>
 
     <footer class="site-footer">
         <div data-include="components/footer.html"></div>
         <script src="scripts/htmlinclude.min.js"></script>
     </footer>
-    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const tabs = document.querySelectorAll(".pill-tab");
+            const panels = document.querySelectorAll(".usage-card");
+
+            const setActivePanel = (id) => {
+                panels.forEach(panel => {
+                    const isMatch = panel.id === id;
+                    panel.classList.toggle("show", isMatch);
+                    panel.setAttribute("aria-hidden", isMatch ? "false" : "true");
+                });
+                tabs.forEach(tab => {
+                    const isMatch = tab.dataset.target === id;
+                    tab.classList.toggle("active", isMatch);
+                    tab.setAttribute("aria-selected", isMatch ? "true" : "false");
+                });
+            };
+
+            tabs.forEach(tab => {
+                tab.addEventListener("click", () => setActivePanel(tab.dataset.target));
+                tab.addEventListener("keydown", (e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        setActivePanel(tab.dataset.target);
+                    }
+                });
+            });
+
+            const slides = document.querySelectorAll(".code-slide");
+            const dots = document.querySelectorAll(".dot");
+            const prev = document.querySelector('[data-dir="prev"]');
+            const next = document.querySelector('[data-dir="next"]');
+            let index = 0;
+
+            const showSlide = (i) => {
+                index = (i + slides.length) % slides.length;
+                slides.forEach((slide, idx) => {
+                    const active = idx === index;
+                    slide.classList.toggle("show", active);
+                    slide.setAttribute("aria-hidden", active ? "false" : "true");
+                });
+                dots.forEach((dot, idx) => {
+                    dot.classList.toggle("active", idx === index);
+                });
+            };
+
+            prev.addEventListener("click", () => showSlide(index - 1));
+            next.addEventListener("click", () => showSlide(index + 1));
+            dots.forEach(dot => dot.addEventListener("click", () => showSlide(Number(dot.dataset.index))));
+        });
+    </script>
 </body>
 </html>
