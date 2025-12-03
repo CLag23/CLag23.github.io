@@ -3,61 +3,69 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project Overview</title>
-    <link rel="stylesheet" href="../client-project/styles/default.css" />
+    <title>Python Pathway | Project Overview</title>
+    <link rel="stylesheet" href="./styles/default.css" />
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        
+        <div data-include="components/header.html"></div>
     </header>
 
     <main>
-        <h1>Project Overview</h1>
+        <section class="page-hero">
+            <p class="eyebrow">Planning</p>
+            <h1>Project overview</h1>
+            <p class="lede">A student-friendly site that introduces Python, highlights real uses, and provides a simple setup checklist.</p>
+        </section>
 
-        <h2>Overview</h2>
-        <p>A student who would like to learn about the basics of the Python programming language.</p>
+        <section class="card-grid" aria-label="Project summary">
+            <article class="info-card">
+                <p class="pill-badge">Audience</p>
+                <h3>Intended users</h3>
+                <p>Students and beginners who want a fast introduction to Python without heavy tooling.</p>
+            </article>
+            <article class="info-card">
+                <p class="pill-badge">Goal</p>
+                <h3>Outcome</h3>
+                <p>Help learners understand what Python is, where it is used, and how to get a working environment.</p>
+            </article>
+            <article class="info-card">
+                <p class="pill-badge">Contact</p>
+                <h3>Client</h3>
+                <p>CarlsEnterprise (email and phone on file).</p>
+            </article>
+        </section>
 
-        <h2>Intended Users</h2>
-        <p>Students or beginners who are looking to learn how to code.</p>
+        <section>
+            <h2>Site map</h2>
+            <p>Navigation flows through the primary header and uses consistent cards across pages.</p>
+            <ul>
+                <li><strong>Home</strong> &mdash; links to all core sections.</li>
+                <li><strong>What is Python?</strong> &mdash; concepts and syntax snapshots.</li>
+                <li><strong>How It's Used</strong> &mdash; tabbed use cases with code slides.</li>
+                <li><strong>Set Up</strong> &mdash; install, editor choices, and virtual env primer.</li>
+                <li><strong>Feedback</strong> &mdash; validated form with inline confirmation.</li>
+                <li><strong>Login</strong> &mdash; simple sign-in card with local storage support.</li>
+            </ul>
+            <div class="mini-figure">
+                <img src="./images/siteMap.png" alt="Site map for Python Pathway">
+            </div>
+        </section>
 
-        <h2>Overview</h2>
-        <p>A learning website designed for students who want to understand the basics of programming languages such as Python.  The website shows them how Python is used in real-world applications. Also, the website provides step-by-step guidance and examples</p>
-
-        <h2>Client Information</h2>
-        <p>Name of the client: [private]</p>
-        <p>Organization/Institute/Business the client(s) are associated with: CarlsEnterprise</p>
-        <p>Client’s valid email address: [private]</p>
-        <p>Client’s phone number: [private]</p>
-
-        <h2>Site Map</h2>
-        <p>(Brief description of main pages and navigation flow.)</p>
-        <img src="../client-project/images/siteMap.png" alt="picture of site map">
-
-        <h2>Page Design</h2>
-        <p><b>Home Page</b> - Introduces the website and helps users navigate to main sections like Login, What is Python, How It’s Used, and Contact Support. It doesn’t collect data; users click buttons to access other pages.</p>
-        <p><b>Login Page</b> - Lets registered users sign in using a username and password. It includes validation for required fields and redirects successful logins to the Menu page.</p>
-        <p><b>Menu Page</b> - Serves as the dashboard after login, providing links to learning modules such as What is Python, How It’s Used, Set Up Environment, and Contact Support. It doesn’t require user input.</p>
-        <p><b>Python Page</b> - Explains what Python is through sections like Definition, Basic Concepts, and Code Examples. Users can click links to view explanations and examples without entering any data.</p>
-        <p><b>How It’s Used Page</b> - Shows real-world applications of Python in areas like Web Development, Artificial Intelligence, and Data Science. Users can click to explore each topic.</p>
-        <p><b>Set Up Environment Page</b> - Guides beginners through installing Python, choosing a code editor, and using online environments. It includes external links to resources and tutorials but requires no input.</p>
-        <p><b>Contact Support Page</b> - Gives users help options and includes a link to the Feedback form. It doesn’t collect data directly.</p>
-        <p><b>Feedback</b> - A button that sends users to the form page</p>
-        <p><b>Freedback form Form Page</b> - Collects user inquiries with fields for name, email, and message. It includes validation and buttons to submit, reset, or go back.</p>
-
-        <h2>Dynamic Functionality</h2>
-        <p>On the Login and Form pages, JavaScript will check that all fields are filled correctly before allowing users to submit. Reference: <a href="https://www.w3schools.com/js/js_validation.asp">w3schools</a></p>
-        <p>On the Set Up Environment page, a “Next Step” button will show each setup instruction one at a time, helping users follow along. Reference: <a href="https://www.freecodecamp.org">Freecodecamp</a></p>
-        <p>On the How It’s Used page, clicking a topic like “Web Development” will expand or collapse additional details using JavaScript. Reference: <a href="https://www.linkedin.com">Linkedin</a></p>
+        <section>
+            <h2>Dynamic functionality</h2>
+            <ul>
+                <li>Tabbed content and a slide carousel on How It's Used (changes content on click and keypress).</li>
+                <li>Login form validation with local email save when Remember Me is selected.</li>
+                <li>Feedback form validation that renders a confirmation summary without leaving the page.</li>
+            </ul>
+        </section>
     </main>
 
-    <footer>
-        <script src="../client-project/scripts/htmlinclude.min.js"></script>
-        
-        
+    <footer class="site-footer">
+        <div data-include="components/footer.html"></div>
+        <script src="scripts/htmlinclude.min.js"></script>
     </footer>
-
-    
 </body>
 </html>
-

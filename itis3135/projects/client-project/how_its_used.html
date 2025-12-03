@@ -26,13 +26,14 @@
         </section>
 
         <section class="usage-tabs">
+            <h2 class="sr-only">Python use cases</h2>
             <div class="pill-tabs" role="tablist" aria-label="Python use cases">
-                <button class="pill-tab active" data-target="web-panel" aria-controls="web-panel" aria-selected="true" role="tab">Web Development</button>
-                <button class="pill-tab" data-target="ai-panel" aria-controls="ai-panel" aria-selected="false" role="tab">Artificial Intelligence</button>
-                <button class="pill-tab" data-target="data-panel" aria-controls="data-panel" aria-selected="false" role="tab">Data Science</button>
+                <button class="pill-tab" data-target="web-panel" data-state="active" aria-controls="web-panel" aria-selected="true" role="tab">Web Development</button>
+                <button class="pill-tab" data-target="ai-panel" data-state="inactive" aria-controls="ai-panel" aria-selected="false" role="tab">Artificial Intelligence</button>
+                <button class="pill-tab" data-target="data-panel" data-state="inactive" aria-controls="data-panel" aria-selected="false" role="tab">Data Science</button>
             </div>
 
-            <article class="usage-card show" id="web-panel" role="tabpanel">
+            <div class="usage-card" data-show="true" id="web-panel" role="tabpanel">
                 <div class="card-head">
                     <span class="icon" aria-hidden="true">&#127760;</span>
                     <div>
@@ -50,9 +51,9 @@
                 </ul>
                 <p class="meta"><strong>Popular frameworks:</strong> Django, Flask, FastAPI, Pyramid</p>
                 <p class="meta"><strong>Real-world examples:</strong> Instagram, Spotify, Pinterest, Dropbox</p>
-            </article>
+            </div>
 
-            <article class="usage-card" id="ai-panel" role="tabpanel" aria-hidden="true">
+            <div class="usage-card" data-show="false" id="ai-panel" role="tabpanel" aria-hidden="true">
                 <div class="card-head">
                     <span class="icon" aria-hidden="true">&#129302;</span>
                     <div>
@@ -70,9 +71,9 @@
                 </ul>
                 <p class="meta"><strong>Popular libraries:</strong> TensorFlow, PyTorch, scikit-learn, Keras, OpenCV</p>
                 <p class="meta"><strong>Real-world examples:</strong> Recommendation engines, autopilot systems, voice assistants</p>
-            </article>
+            </div>
 
-            <article class="usage-card" id="data-panel" role="tabpanel" aria-hidden="true">
+            <div class="usage-card" data-show="false" id="data-panel" role="tabpanel" aria-hidden="true">
                 <div class="card-head">
                     <span class="icon" aria-hidden="true">&#128202;</span>
                     <div>
@@ -90,7 +91,7 @@
                 </ul>
                 <p class="meta"><strong>Popular libraries:</strong> Pandas, NumPy, Matplotlib, Seaborn, Plotly</p>
                 <p class="meta"><strong>Real-world examples:</strong> NASA telemetry, finance risk models, logistics forecasting</p>
-            </article>
+            </div>
         </section>
 
         <section class="usage-code">
@@ -104,7 +105,7 @@
             <p class="lede">Flip through quick snippets to see how Python moves from a blank file to something shippable.</p>
 
             <div class="code-carousel">
-                <article class="code-slide show" data-index="0">
+                <article class="code-slide" data-show="true" data-index="0">
                     <h3>Web: Simple API Endpoint</h3>
                     <p class="code-caption">A tiny Flask route that returns JSON.</p>
 <pre><code>from flask import Flask, jsonify
@@ -123,7 +124,7 @@ if __name__ == "__main__":
     app.run(debug=True)</code></pre>
                 </article>
 
-                <article class="code-slide" data-index="1" aria-hidden="true">
+                <article class="code-slide" data-show="false" data-index="1" aria-hidden="true">
                     <h3>AI: Quick Image Classification</h3>
                     <p class="code-caption">Load a pre-trained MobileNet model to label an image.</p>
 <pre><code>from tensorflow.keras.applications import MobileNetV2
@@ -140,7 +141,7 @@ predictions = model.predict(x)
 print(predictions[0][:3])</code></pre>
                 </article>
 
-                <article class="code-slide" data-index="2" aria-hidden="true">
+                <article class="code-slide" data-show="false" data-index="2" aria-hidden="true">
                     <h3>Data: Fast Data Summary</h3>
                     <p class="code-caption">Use pandas to summarize and visualize sales by category.</p>
 <pre><code>import pandas as pd
@@ -160,9 +161,9 @@ plt.show()</code></pre>
                 <div class="code-nav">
                     <button class="ghost" data-dir="prev">&larr; Previous</button>
                     <div class="dots" role="tablist" aria-label="Example slides">
-                        <button class="dot active" data-index="0"><span class="sr-only">Web example</span></button>
-                        <button class="dot" data-index="1"><span class="sr-only">AI example</span></button>
-                        <button class="dot" data-index="2"><span class="sr-only">Data example</span></button>
+                        <button class="dot" data-state="active" data-index="0"><span class="sr-only">Web example</span></button>
+                        <button class="dot" data-state="inactive" data-index="1"><span class="sr-only">AI example</span></button>
+                        <button class="dot" data-state="inactive" data-index="2"><span class="sr-only">Data example</span></button>
                     </div>
                     <button class="ghost" data-dir="next">Next &rarr;</button>
                 </div>
@@ -188,58 +189,7 @@ plt.show()</code></pre>
     <footer class="site-footer">
         <div data-include="components/footer.html"></div>
         <script src="scripts/htmlinclude.min.js"></script>
+        <script src="scripts/how_its_used.js"></script>
     </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const tabs = document.querySelectorAll(".pill-tab");
-            const panels = document.querySelectorAll(".usage-card");
-
-            const setActivePanel = (id) => {
-                panels.forEach(panel => {
-                    const isMatch = panel.id === id;
-                    panel.classList.toggle("show", isMatch);
-                    panel.setAttribute("aria-hidden", isMatch ? "false" : "true");
-                });
-                tabs.forEach(tab => {
-                    const isMatch = tab.dataset.target === id;
-                    tab.classList.toggle("active", isMatch);
-                    tab.setAttribute("aria-selected", isMatch ? "true" : "false");
-                });
-            };
-
-            tabs.forEach(tab => {
-                tab.addEventListener("click", () => setActivePanel(tab.dataset.target));
-                tab.addEventListener("keydown", (e) => {
-                    if (e.key === "Enter" || e.key === " ") {
-                        e.preventDefault();
-                        setActivePanel(tab.dataset.target);
-                    }
-                });
-            });
-
-            const slides = document.querySelectorAll(".code-slide");
-            const dots = document.querySelectorAll(".dot");
-            const prev = document.querySelector('[data-dir="prev"]');
-            const next = document.querySelector('[data-dir="next"]');
-            let index = 0;
-
-            const showSlide = (i) => {
-                index = (i + slides.length) % slides.length;
-                slides.forEach((slide, idx) => {
-                    const active = idx === index;
-                    slide.classList.toggle("show", active);
-                    slide.setAttribute("aria-hidden", active ? "false" : "true");
-                });
-                dots.forEach((dot, idx) => {
-                    dot.classList.toggle("active", idx === index);
-                });
-            };
-
-            prev.addEventListener("click", () => showSlide(index - 1));
-            next.addEventListener("click", () => showSlide(index + 1));
-            dots.forEach(dot => dot.addEventListener("click", () => showSlide(Number(dot.dataset.index))));
-        });
-    </script>
 </body>
 </html>

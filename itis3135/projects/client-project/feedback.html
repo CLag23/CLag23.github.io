@@ -14,51 +14,67 @@
     </header>
     
     <main>
-        <h2>Contact Support</h2>
-        <h3>Please send us your questions or feedback</h3>
+        <section class="page-hero">
+            <p class="eyebrow">We listen</p>
+            <h1>Contact support</h1>
+            <p class="lede">Send questions, requests, or ideas. A summary appears on the page after you submit.</p>
+        </section>
 
-        <form id="feedbackForm" novalidate>
-            <fieldset>
-                <legend>Your Information</legend>
+        <div class="feedback-layout">
+            <form id="feedbackForm" novalidate>
+                <fieldset>
+                    <legend>Your information</legend>
+                    <label for="name">Name</label>
+                    <input 
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your full name"
+                        required
+                    />
 
-                <label for="name">Name</label>
-                <input 
-                    type="text"
-                    id="name"
-                    name="name"
-                    placeholder="Enter your full name"
-                    required
-                />
+                    <label for="email">Email</label>
+                    <input 
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="you@example.com"
+                        required
+                    />
+                </fieldset>
 
-                <label for="email">Email</label>
-                <input 
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="you@example.com"
-                    required
-                />
-            </fieldset>
+                <fieldset>
+                    <legend>Message</legend>
+                    <label for="message">Your message</label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        placeholder="Tell us what you need help with"
+                        rows="6"
+                        required
+                    ></textarea>
+                </fieldset>
 
-            <fieldset>
-                <legend>Message</legend>
+                <p>All fields are required.</p>
 
-                <label for="message">Your Message</label>
-                <textarea 
-                    id="message" 
-                    name="message" 
-                    placeholder="Type your message here..." 
-                    rows="6"
-                    required
-                ></textarea>
-            </fieldset>
+                <div class="button-row">
+                    <button type="submit">Submit</button>
+                    <button type="reset" id="resetButton" class="secondary">Reset</button>
+                    <button type="button" id="goBackButton" class="secondary">Go back</button>
+                </div>
+            </form>
 
-            <p>All fields are required.</p>
-
-            <button type="submit">Submit</button>
-            <button type="reset" id="resetButton">Reset</button>
-            <button type="button" id="goBackButton">Go Back</button>
-        </form>
+            <aside class="feedback-card" aria-label="Response times and help">
+                <h3>What to expect</h3>
+                <p>We respond within one business day with links or next steps.</p>
+                <ul>
+                    <li>Usage questions? Mention the page name.</li>
+                    <li>Found an issue? Tell us the browser and device.</li>
+                    <li>Want a new topic? Share a quick sentence on why.</li>
+                </ul>
+                <p class="pill-badge">Thank you for improving Python Pathway.</p>
+            </aside>
+        </div>
     </main>
 
     <footer class="site-footer">

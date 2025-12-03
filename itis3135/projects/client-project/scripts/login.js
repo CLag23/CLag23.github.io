@@ -61,6 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
       // ignore storage errors
     }
 
-    window.location.href = 'homePage.html';
+    window.location.href = 'index.html';
   });
 });

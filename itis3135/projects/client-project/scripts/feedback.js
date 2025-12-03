@@ -1,3 +1,5 @@
+// Feedback form interactions | Author: CL
+// Validates input, shows a confirmation summary, and supports reset/back actions.
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("feedbackForm");
   if (!form) return;
@@ -58,8 +60,8 @@ document.addEventListener("DOMContentLoaded", () => {
     return `
       <section id="feedbackOutput">
         <h2>Thank you, ${nameVal}!</h2>
-        <p>Your inquiry has been recorded. We’ll contact you at <strong>${emailVal}</strong>.</p>
-        <h3>Your Message</h3>
+        <p>Your inquiry has been recorded. We'll contact you at <strong>${emailVal}</strong>.</p>
+        <h3>Your message</h3>
         <blockquote>${messageVal}</blockquote>
         <p><a href="#" id="sendAnother">Send another message</a></p>
       </section>
@@ -113,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (history.length > 1) {
         history.back();
       } else {
-        window.location.href = "../index.html";
+        window.location.href = "index.html";
       }
     });
   }
