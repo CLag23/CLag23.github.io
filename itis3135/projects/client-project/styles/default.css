@@ -1,4 +1,4 @@
-﻿* {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -206,7 +206,7 @@ main a:hover {
   height: auto;
 }
 
-/* Table + code presentation */
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -632,7 +632,6 @@ button.secondary:hover {
     text-align: center;
   }
 
-  .card-grid,
   .feedback-layout {
     grid-template-columns: 1fr;
   }
