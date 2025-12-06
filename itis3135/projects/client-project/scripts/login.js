@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const rememberedEmail = localStorage.getItem('pp_remember_email');
         if (rememberedEmail && email) email.value = rememberedEmail;
     } catch (err) {
-      
+        // something
     }
 
     const clearCustomValidity = () => {
